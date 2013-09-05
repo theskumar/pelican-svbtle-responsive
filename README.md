@@ -18,6 +18,11 @@ You can see the [theme in action](http://saurabh-kumar.com/).
 - no IE testing
 - no custom menu
 
+## Roadmap
+- [ ] add semantic markups (http://schema.org)
+- [ ] better typography
+
+
 ## INSTALL
 
 Clone the [repository](https://github.com/theskumar/pelican-svbtle-responsive), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
