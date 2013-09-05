@@ -1,10 +1,10 @@
-# SVBHACK
+# SVTLE RESPONSIVE THEME
 
-pelican-svbhack is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
+pelican-svbtle-responsive is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
 
 ## DEMO
 
-You can see the [theme in action](http://www.giuliofidente.com/).
+You can see the [theme in action](http://saurabh-kumar.com/).
 
 ## FEATURES
 
@@ -20,7 +20,7 @@ You can see the [theme in action](http://www.giuliofidente.com/).
 
 ## INSTALL
 
-Clone the [repository](https://github.com/giulivo/pelican-svbhack), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
+Clone the [repository](https://github.com/theskumar/pelican-svbtle-responsive), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
 
 ## PELICANCONF.PY
 
@@ -38,7 +38,6 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
 
-When developing locally, you may want to set the following variable: `SITEURL = http://localhost:8000`
 
 ## MODIFICATIONS
 
@@ -47,7 +46,9 @@ When developing locally, you may want to set the following variable: `SITEURL = 
 
 ## AUTHOR
 
-pelican-svbhack is authored by Giulio Fidente.
+pelican-svbtle-responsive is authored by Saurabh Kumar ([@thes_kumar](http://twitter.com/thes_kumar))
+
+It is a fork of [pelican-svbhack](https://github.com/giulivo/pelican-svbhack) authored by Giulio Fidente.
 
 ## LICENSE
 
