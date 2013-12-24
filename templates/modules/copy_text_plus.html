@@ -1,0 +1,22 @@
+{% if COPY_TEXT_PLUS %}
+<script>
+function addLink() {
+    var body_element = document.getElementsByTagName('body')[0],
+        selection = window.getSelection(),
+        pagelink = "<br><br>Read more at: <a href='"+document.location.href+"'>"+document.location.href+"</a>",
+        copytext = selection + pagelink,
+        newdiv = document.createElement('div');
+    newdiv.style.position='absolute';
+    newdiv.style.left='-99999px';
+    body_element.appendChild(newdiv);
+    newdiv.innerHTML = copytext;
+    selection.selectAllChildren(newdiv);
+    window.setTimeout(function() {
+        body_element.removeChild(newdiv);
+    },0);
+}
+
+// register the listener.
+document.getElementById('article_text').oncopy = addLink;
+</script>
+{% endif %}
