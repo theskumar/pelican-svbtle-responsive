@@ -43,6 +43,8 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 - `INTERNET_DEFENSE_LEAGUE` set this to `True` if you want to enable the [Internet Defense League](http://internetdefenseleague.org) code
 
+- `COPY_TEXT_PLUS` set this to `True` if you want to add `Read More at page-url` when a text from the blog article is copied by someone.
+
 
 ## MODIFICATIONS
 
