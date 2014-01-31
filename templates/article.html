@@ -12,20 +12,20 @@
 {% block content %}
 <article>
   <div id="article_title">
-    <h3><a href="{{ SITEURL }}/{{ article.url }}">{{ article.title }}</a></h3>
+    <h1>{{ article.title }}</h1>
   </div>
   <div id="article_text">
     {{ article.content }}
   </div>
   <div id="article_meta">
-    <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a></p>
-    {% if article.tags %}
-    <p>Tags:
+    <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
+    {% if article.tags %} Tags:
       {% for tag in article.tags %}
       <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
       {% endfor %}
-    </p>
     {% endif %}
+    </p>
+
     {% if DISQUS_SITENAME %}
     <p>Comments: <a href="#" onclick="javascript:toggleComments();return false;">toggle</a></p>
     {% endif %}
