@@ -1,11 +1,14 @@
 {% extends "base.html" %}
+
 {% block content %}
+
+<section itemscope itemtype="http://schema.org/Blog">
 {% for article in articles_page.object_list %}
-<article>
+<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
   <div id="article_title">
-    <h2><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
+    <h2 itemprop="headline"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
   </div>
-  <div id="article_text">
+  <div id="article_text" itemprop="text">
     {{ article.summary }}
   </div>
 </article>
@@ -17,4 +20,6 @@
 
 {% block footer %}
 {% include "modules/pagination.html" %}
+</section>
+
 {% endblock %}
