@@ -2,9 +2,14 @@
 <html lang="{{ DEFAULT_LANG }}" itemscope="" itemtype="http://schema.org/WebPage">
 <head>
   <meta charset="utf-8" />
-  <title> {% block title %}{{ SITENAME }}{% endblock %} </title>
+
+  <title> {% block title %}{{ SITENAME }}{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
+  <meta itemprop="creator" name="author" content="{{ AUTHOR }}">
+  <meta itemprop="description" name="description" content="Posts and writings by {{ AUTHOR }}">
+
   <!-- pace.js -->
-  <script src="{{ SITEURL }}/theme/js/pace.js" type="text/javascript"></script>
+  <script src="{{ SITEURL }}/theme/js/pace.js"></script>
   <style>
   .pace .pace-progress {background: #29d; position: fixed; z-index: 2000; top: 0; left: 0; height: 2px; -webkit-transition: width 1s; -moz-transition: width 1s; -o-transition: width 1s; transition: width 1s; }
   .pace-inactive {display: none; }
@@ -18,9 +23,7 @@
   <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
 
-  <meta name="viewport" content="width=device-width; initial-scale=1.0">
-  <meta itemprop="creator" name="author" content="{{ AUTHOR }}">
-  <meta itemprop="description" name="description" content="Posts and writings by {{ AUTHOR }}">
+
 
   {% if FEED_ALL_ATOM %}
   <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Full Atom Feed" />
