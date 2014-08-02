@@ -10,6 +10,7 @@
   </div>
   <div id="article_text" itemprop="text">
     {{ article.summary }}
+    <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">Read full article...</a>
   </div>
 </article>
 {% if not loop.last %}

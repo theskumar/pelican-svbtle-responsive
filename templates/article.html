@@ -1,19 +1,22 @@
 {% extends "base.html" %}
+{% block page_class %} article {% endblock page_class %}
+
 {% block head %}
-<meta name="keywords" content="{{ article.tags|join(', ')  }}">
-<meta itemprop="name" content="{{ article.title }}">
+    <meta name="keywords" content="{{ article.tags|join(', ')  }}">
+    <meta itemprop="name" content="{{ article.title }}">
 {% endblock %}
 
 {% block title %}{{ article.title }}{% endblock %}
 
 {% block header %}
-<p>Posted on {{ article.locale_date }}</p>
+<p></p>
 {% endblock %}
 
 {% block content %}
 <article itemscope itemtype="http://schema.org/BlogPosting">
-  <div id="article_title">
+  <div id="article_title" class='title'>
     <h1 itemprop="headline">{{ article.title }}</h1>
+    <time datetime="{{article.date}}" itemprop="datePublished">{{ article.locale_date }}</time>.
   </div>
   <div id="article_text" itemprop="articleBody">
     {{ article.content }}
@@ -50,7 +53,7 @@
 {% endblock %}
 
 {% block footer %}
-<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back to Index</a></p>
+<p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back</a></p>
 <script language="javascript">
     function toggleComments() {
         var commentDiv = document.getElementById("article_comments");
