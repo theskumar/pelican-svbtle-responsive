@@ -6,7 +6,9 @@
     <meta itemprop="name" content="{{ article.title }}">
 {% endblock %}
 
-{% block title %}{{ article.title }}{% endblock %}
+{% block title %}
+{{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %} · {{ super() }}
+{% endblock title %}
 
 {% block header %}
 <p></p>
