@@ -41,6 +41,7 @@
 </head>
 
 <body>
+  {% block sidebar %}
   <aside>
     <div id="user_meta">
       <a href="{{ SITEURL }}" class='user_logo_url'>
@@ -68,6 +69,7 @@
       </ul>
     </div>
   </aside>
+  {% endblock sidebar %}
 
   <main>
     <header>

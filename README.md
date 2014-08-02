@@ -4,7 +4,7 @@ pelican-svbtle-responsive is a responsive theme for [Pelican](http://getpelican.
 
 ## DEMO
 
-You can see the [theme in action](http://saurabh-kumar.com/).
+You can see the [theme in action](http://saurabh-kumar.com/blog/).
 
 ## FEATURES
 
@@ -15,7 +15,6 @@ You can see the [theme in action](http://saurabh-kumar.com/).
 
 ## KNOWN ISSUES
 
-- no IE testing
 - no custom menu
 
 ## Roadmap
@@ -46,6 +45,12 @@ Supports a number of common global variables but patches are welcomed if you nee
 - `COPY_TEXT_PLUS` set this to `True` if you want to add `Read More at page-url` when a text from the blog article is copied by someone.
 
 
+## Development 
+
+    npm install
+
+
+
 ## MODIFICATIONS
 
 - Accent color can be changed by editing `@accent` in `./static/css/style.less`.
@@ -53,7 +58,7 @@ Supports a number of common global variables but patches are welcomed if you nee
 
 ## AUTHOR
 
-pelican-svbtle-responsive is authored by Saurabh Kumar ([@thes_kumar](http://twitter.com/thes_kumar))
+pelican-svbtle-responsive is authored by Saurabh Kumar ([@thes_kumar](http://saurabh-kumar.com))
 
 It is a fork of [pelican-svbhack](https://github.com/giulivo/pelican-svbhack) authored by Giulio Fidente.
 
