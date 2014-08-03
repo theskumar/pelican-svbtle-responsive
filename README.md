@@ -8,17 +8,19 @@ You can see the [theme in action](http://saurabh-kumar.com/blog/).
 
 ## FEATURES
 
-- responsive
-- syntax highlighting for pre blocks
-- supports google analytics
+- responsive design
+- comments via disqus
+- syntax highlighting for code blocks
+- support for google analytics
 - custom list of links
+- support for twitter cards
+- semantic Markups for google, facebook and twitter
 
 ## KNOWN ISSUES
 
 - no custom menu
 
 ## Roadmap
-- [ ] add semantic markups (http://schema.org)
 - [ ] better typography
 
 
@@ -31,6 +33,10 @@ Clone the [repository](https://github.com/theskumar/pelican-svbtle-responsive), 
 Supports a number of common global variables but patches are welcomed if you need better support.
 
 - `GOOGLE_ANALYTICS` your UA-XYZ code
+
+- `TWITTER_USERNAME` your twitter username (optional)
+
+- `GOOGLE_PLUS_PROFILE_URL` your google plus profile url (optional)
 
 - `USER_LOGO_URL` you don't need to replace the logo placeholder, instead put your logo in content/images/your_logo.png and make this point to `SITEURL + '/static/images/your_logo.png'`
 
@@ -45,10 +51,10 @@ Supports a number of common global variables but patches are welcomed if you nee
 - `COPY_TEXT_PLUS` set this to `True` if you want to add `Read More at page-url` when a text from the blog article is copied by someone.
 
 
-## Development 
+## Development
 
     npm install
-
+    gulp
 
 
 ## MODIFICATIONS
