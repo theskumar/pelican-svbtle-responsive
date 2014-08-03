@@ -18,7 +18,10 @@
   {% endif %}
   {% block head_meta_tag %}
   {% if GOOGLE_PLUS_PROFILE_URL %}<link rel="author" href={{ GOOGLE_PLUS_PROFILE_URL }}>{% endif %}
-  {% if TWITTER_USERNAME %}<meta name="twitter:creator" content="@{{TWITTER_USERNAME}}">{% endif %}
+  {% if TWITTER_USERNAME %}
+  <meta name="twitter:creator" content="@{{TWITTER_USERNAME}}">
+  <meta name="twitter:site" content="@{{TWITTER_USERNAME}}">
+  {% endif %}
   {% endblock head_meta_tag %}
 
   {% include "modules/pace.html" %}

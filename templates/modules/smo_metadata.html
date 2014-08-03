@@ -8,9 +8,12 @@
 {% if article.date %} <meta property="og:article:published_time" content="{{ article.date.isoformat() }}">{% endif %}
 {% if article.locale_modified and article.modified %}<meta property="" content="{{ article.modified.isoformat() }}">{% endif %}
 <meta name="twitter:title" content="{{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %}">
-<meta name="twitter:description" content="{{article.summary|striptags|e}}">
+<meta name="twitter:description" content="{{article.summary|striptags|truncate(200)|e}}">
 {% if article.featured_image %}
+<meta name="twitter:card" content="summary_large_image">
 <meta property="og:image" content="{{article.featured_image}}">
 <meta name="twitter:image" content="{{article.featured_image}}">
+{% else %}
+<meta name="twitter:card" content="summary">
 {% endif %}
 {% endmacro %}
