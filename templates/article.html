@@ -1,18 +1,18 @@
 {% extends "base.html" %}
 {% block page_class %} article {% endblock page_class %}
-
-{% block head %}
-    <meta name="keywords" content="{{ article.tags|join(', ')  }}">
-    <meta itemprop="name" content="{{ article.title }}">
-{% endblock %}
-
 {% block title %}
 {{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %} · {{ super() }}
 {% endblock title %}
 
-{% block header %}
-<p></p>
-{% endblock %}
+{% block head_meta_tag %}
+{{ super() }}
+{% if article.tags or article.category or article.keywords %}
+<meta name="keywords" content="{{ [article.tags|join(', '), article.category, article.keywords]|join(', ') }}" />
+{% endif %}
+{% from 'modules/smo_metadata.html' import smo_metadata with context %}
+{{ smo_metadata(article) }}
+{% endblock head_meta_tag %}
+
 
 {% block content %}
 <article itemscope itemtype="http://schema.org/BlogPosting">

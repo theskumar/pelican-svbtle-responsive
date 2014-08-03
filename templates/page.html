@@ -1,9 +1,14 @@
 {% extends "base.html" %}
-{% block title %}{{ page.title }}{% endblock %}
 
-{% block header %}
-<p>Updated on {{ page.locale_date }}</p>
+{% block title %}
+{{ page.title|striptags|e }} {%if page.subtitle %} - {{ page.subtitle|striptags|e }} {% endif %} · {{ super() }}
 {% endblock %}
+
+{% block head_meta_tag %}
+{{ super() }}
+{% from 'modules/smo_metadata.html' import smo_metadata with context %}
+{{ smo_metadata(page) }}
+{% endblock head_meta_tag %}
 
 {% block content %}
 <article>

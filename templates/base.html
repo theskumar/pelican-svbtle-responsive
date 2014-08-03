@@ -3,10 +3,23 @@
 <head>
   <meta charset="utf-8" />
 
-  <title> {% block title %}{{ SITENAME }}{% endblock %}</title>
+  <title>{% block title %}{{ SITENAME|striptags|e }}{% endblock %}</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" user-scalable="no">
-  <meta itemprop="creator" name="author" content="{{ AUTHOR }}">
-  <meta itemprop="description" name="description" content="Thoughts, Ideas and writings by {{ AUTHOR }}">
+
+  {% if article and article.author %}
+  <meta name="author" content="{{ article.author }}">
+  <meta name="copyright" content="{{ article.author }}">
+  {% elif page and page.author %}
+  <meta name="author" content="{{ page.author }}">
+  <meta name="copyright" content="{{ page.author }}">
+  {% else %}
+  <meta name="author" content="{{ AUTHOR }}">
+  <meta name="copyright" content="{{ AUTHOR }}">
+  {% endif %}
+  {% block head_meta_tag %}
+  {% if GOOGLE_PLUS_PROFILE_URL %}<link rel="author" href={{ GOOGLE_PLUS_PROFILE_URL }}>{% endif %}
+  {% if TWITTER_USERNAME %}<meta name="twitter:creator" content="@{{TWITTER_USERNAME}}">{% endif %}
+  {% endblock head_meta_tag %}
 
   {% include "modules/pace.html" %}
 
@@ -23,8 +36,6 @@
 
   {% block head %}
   {% endblock %}
-
-
 
   {% include "modules/analytics.html" %}
 </head>
