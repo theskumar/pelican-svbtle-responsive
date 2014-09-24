@@ -1,0 +1,12 @@
+.blog-list {
+    .article_title {
+        h2 {
+            margin: 0 0 0.4em 0;
+        }
+    }
+    .article_summary {
+        .read-more {
+            text-decoration: none !important;
+        }
+    }
+}

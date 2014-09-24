@@ -27,8 +27,7 @@ main {
   article {
     max-width: 640px;
     padding: 40px;
-    div {
-      &#article_title {
+      #article_title {
         h2 {
           font-size: 1.8em;
         }
@@ -46,7 +45,7 @@ main {
           }
         }
       }
-      &#article_text {
+      #article_text {
         line-height: 1.375em;
         a {
           text-decoration: underline;
@@ -97,11 +96,10 @@ main {
           margin: 0 auto !important;
         }
       }
-      &#article_meta {
+      #article_meta {
         font-size: 0.625em;
         color: #999999;
       }
-    }
   }
   footer {
     border-top: #eeeeee 1px solid;

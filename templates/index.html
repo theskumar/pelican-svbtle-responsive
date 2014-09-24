@@ -1,23 +1,28 @@
 {% extends "base.html" %}
 {% block title %}{{ SITENAME }} — Blog{% endblock %}
-{% block content %}
+{% block page_class %} blog-list {% endblock %}
 
+{% block content %}
 <section itemscope itemtype="http://schema.org/Blog">
-{% for article in articles_page.object_list %}
-<article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-  <div id="article_title">
-    <h2 itemprop="headline"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
-  </div>
-  <div id="article_text" itemprop="text">
-    {{ article.summary }}
-    <a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">Read full article...</a>
-  </div>
-</article>
-{% if not loop.last %}
-<hr />
-{% endif %}
-{% endfor %}
-{% endblock %}
+    {% for article in articles_page.object_list %}
+    <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+
+      <header class="article_title" id="article_title">
+        <h2 itemprop="headline"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
+      </header>
+
+      {% if article.summary %}
+          <section class='article_summary' id="article_text" itemprop="text">
+            <p>{{ article.summary|striptags }} <a class='read-more' href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">&raquo;</a></p>
+          </section>
+      {% endif %}
+
+    </article>
+    {% if not loop.last %}
+    <hr />
+    {% endif %}
+    {% endfor %}
+{% endblock content %}
 
 {% block footer %}
 {% include "modules/pagination.html" %}

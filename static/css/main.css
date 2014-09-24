@@ -286,32 +286,32 @@ img {
 main article {
   max-width: 640px;
   padding: 40px; }
-  main article div#article_title h2 {
+  main article #article_title h2 {
     font-size: 1.8em; }
-  main article div#article_title h1 {
+  main article #article_title h1 {
     margin: 0 0 1em 0;
     font-size: 2.2em;
     color: #111; }
-  main article div#article_title a {
+  main article #article_title a {
     transition: all 0.1s linear;
     border-bottom: 3px solid transparent; }
-    main article div#article_title a:hover {
+    main article #article_title a:hover {
       color: #0e94ec;
       border-bottom: 3px solid #0e94ec; }
-  main article div#article_text {
+  main article #article_text {
     line-height: 1.375em; }
-    main article div#article_text a {
+    main article #article_text a {
       text-decoration: underline; }
-    main article div#article_text p:hover a, main article div#article_text .section:hover a {
+    main article #article_text p:hover a, main article #article_text .section:hover a {
       color: #427fed; }
-    main article div#article_text code {
+    main article #article_text code {
       margin: 2px;
       padding: 0;
       color: #333332;
       font-size: 0.75em;
       font-family: 'PT Mono', monospace;
       background: #eeeeee; }
-    main article div#article_text pre {
+    main article #article_text pre {
       margin: 10px 2px 10px 2px;
       padding: 10px;
       color: #333332;
@@ -321,25 +321,25 @@ main article {
       background: #eeeeee;
       line-height: 1.125em;
       overflow-x: auto; }
-    main article div#article_text blockquote {
+    main article #article_text blockquote {
       margin: 22px 2px 22px 2px;
       padding-left: 40px;
       color: #999999;
       font-style: italic; }
-    main article div#article_text .footnote-reference {
+    main article #article_text .footnote-reference {
       vertical-align: super;
       font-size: 12px;
       text-decoration: none;
       line-height: 1; }
-    main article div#article_text .footnote {
+    main article #article_text .footnote {
       font-size: smaller; }
-      main article div#article_text .footnote .fn-backref {
+      main article #article_text .footnote .fn-backref {
         margin-right: 5px;
         text-decoration: none; }
-    main article div#article_text iframe#twitter-widget-0 {
+    main article #article_text iframe#twitter-widget-0 {
       width: 89%;
       margin: 0 auto !important; }
-  main article div#article_meta {
+  main article #article_meta {
     font-size: 0.625em;
     color: #999999; }
 main footer {
@@ -391,6 +391,11 @@ main div#ending_message {
   margin: 0 0 0 0 !important; }
 .article .title time {
   font-size: 0.5rem; }
+
+.blog-list .article_title h2 {
+  margin: 0 0 0.4em 0; }
+.blog-list .article_summary .read-more {
+  text-decoration: none !important; }
 
 .dr-menu {
   display: none;
