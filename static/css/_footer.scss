@@ -9,3 +9,26 @@ footer {
         }
     }
 }
+#ending_message {
+    border-top: #eeeeee 1px solid;
+    padding: 0 40px 0 40px;
+    color: #999999;
+    font-size: 0.675em;
+    clear: both;
+    img {
+        vertical-align: top;
+    }
+    .copyright {
+        display: block;
+        width: 45%;
+        float: left;
+        margin: 10px 0;
+    }
+    .builtby {
+        display: block;
+        width: 45%;
+        float: right;
+        text-align: right;
+        margin: 10px 0;
+    }
+}

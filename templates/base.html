@@ -44,6 +44,9 @@
 </head>
 
 <body class="{% block page_class %}{% endblock %}">
+    <nav class="main-nav">
+        <a class="subscribe-button icon-feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}">Subscribe</a>
+    </nav>
   {% block sidebar %}
   <nav id="dr-menu" class="dr-menu">
       <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">MENU</a></div>
@@ -75,11 +78,6 @@
       {% endblock %}
     </footer>
 
-    <div id="ending_message">
-      <p><a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/80x15.png" /></a> This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/deed.en_US">Creative Commons Attribution 4.0 International License</a>.<br/>
-      Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Saurabh Kumar on <a href="https://github.com/theskumar/pelican-svbtle-responsive" target="_blank">github</a>. {% if INTERNET_DEFENSE_LEAGUE %}Member of the <a href="http://internetdefenseleague.org">Internet Defense League</a>{% endif %}.</p>
-    </div>
-
     <div class='site_info'>
       <a href="{{ SITEURL }}" class='logo'>
         {% if USER_LOGO_URL %}
@@ -93,8 +91,16 @@
         <p>{{ TAGLINE }}</p>
       </div>
     </div>
-
   </main>
+  <div id="ending_message" class='clearfix'>
+    <section class='copyright'>
+        <a rel="license" target="blank" href="http://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+    </section>
+    <section class='builtby'>
+        Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Saurabh Kumar on <a href="https://github.com/theskumar/pelican-svbtle-responsive" target="_blank">github</a>.
+    </section>
+
+  </div>
   {% include "modules/idl.html" %}
   {% include "modules/copy_text_plus.html" %}
   <script>
