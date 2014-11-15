@@ -1,0 +1,1 @@
+- remove discuss comment toggle
