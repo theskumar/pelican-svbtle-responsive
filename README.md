@@ -2,33 +2,31 @@
 
 pelican-svbtle-responsive is a responsive theme for [Pelican](http://getpelican.com), it is my hack of a svbtle-like theme.
 
-## DEMO
+## Demo
 
 You can see the [theme in action](http://saurabh-kumar.com/blog/).
 
 ![screenshot](screenshot.png)
 
-## FEATURES
+## Features
 
-- responsive design
-- comments via disqus
-- syntax highlighting for code blocks
-- support for google analytics
-- custom list of links
-- support for twitter cards
-- semantic Markups for google, facebook and twitter
+- Clean and responsive design
+- [Disqus](https://disqus.com/) Comments
+- Customizable Syntax highlighting via [pygments][pygments]
+- Google analytics
+- Twitter [cards][twitter-cards]
+- semantic tags for google, facebook and twitter
 
-## KNOWN ISSUES
+[pygments]: http://pygments.org/
+[twitter-cards]: https://dev.twitter.com/cards/overview
 
-- no custom menu
-
-## INSTALL
+## Installation
 
 Clone the [repository](https://github.com/theskumar/pelican-svbtle-responsive), edit your `pelicanconf.py` and modify the `THEME` variable to make it point to the downloaded theme location.
 
-## PELICANCONF.PY
+### Configurations
 
-Supports a number of common global variables but patches are welcomed if you need better support.
+The following global variables can be added to you `pelicanconf.py` for use different features of this theme. See sample configuration [here](https://github.com/theskumar/blog/blob/master/pelicanconf.py) and [here](https://github.com/theskumar/blog/blob/master/publishconf.py).
 
 - `GOOGLE_ANALYTICS` your UA-XYZ code
 
@@ -39,8 +37,6 @@ Supports a number of common global variables but patches are welcomed if you nee
 - `USER_LOGO_URL` you don't need to replace the logo placeholder, instead put your logo in content/images/your_logo.png and make this point to `SITEURL + '/static/images/your_logo.png'`
 
 - `DISQUS_SITENAME` set this to enable disqus comments in articles
-
-- `COLLAPSE_COMMENTS` set to `True` to have article comments hidden by default. Clicking on the `comments` link will toggle visibility.
 
 - `TAGLINE` some text rendered right below the logo
 
@@ -54,15 +50,12 @@ Supports a number of common global variables but patches are welcomed if you nee
     npm install
     gulp
 
+A different Pygmentize theme can be used by editing `./Makefile` and running `make pygments`.
 
-## MODIFICATIONS
+## Author
 
-- A different Pygmentize theme can be used by editing `./Makefile` and running `make pygments`.
+pelican-svbtle-responsive is authored by Saurabh Kumar ([@_theskumar](http://saurabh-kumar.com))
 
-## AUTHOR
+## License
 
-pelican-svbtle-responsive is authored by Saurabh Kumar ([@thes_kumar](http://saurabh-kumar.com))
-
-## LICENSE
-
-Released under MIT License, full details in `LICENSE` file.
+MIT
