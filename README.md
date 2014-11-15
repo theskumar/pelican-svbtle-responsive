@@ -6,6 +6,8 @@ pelican-svbtle-responsive is a responsive theme for [Pelican](http://getpelican.
 
 You can see the [theme in action](http://saurabh-kumar.com/blog/).
 
+![screenshot](screenshot.png)
+
 ## FEATURES
 
 - responsive design
@@ -19,10 +21,6 @@ You can see the [theme in action](http://saurabh-kumar.com/blog/).
 ## KNOWN ISSUES
 
 - no custom menu
-
-## Roadmap
-- [ ] better typography
-
 
 ## INSTALL
 
@@ -65,8 +63,6 @@ Supports a number of common global variables but patches are welcomed if you nee
 ## AUTHOR
 
 pelican-svbtle-responsive is authored by Saurabh Kumar ([@thes_kumar](http://saurabh-kumar.com))
-
-It is a fork of [pelican-svbhack](https://github.com/giulivo/pelican-svbhack) authored by Giulio Fidente.
 
 ## LICENSE
 
