@@ -16,9 +16,11 @@ You can see the [theme in action](http://saurabh-kumar.com/blog/).
 - Google analytics
 - Twitter [cards][twitter-cards]
 - semantic tags for google, facebook and twitter
+- Responsive Videos using [fitvids][fitvids]
 
 [pygments]: http://pygments.org/
 [twitter-cards]: https://dev.twitter.com/cards/overview
+[fitvids]: http://fitvidsjs.com/
 
 ## Installation
 

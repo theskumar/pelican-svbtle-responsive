@@ -545,6 +545,9 @@ main footer {
   .dr-menu.dr-menu-open > div .dr-label {
     transform: translateY(-90%); }
 
+.fluid-width-video-wrapper {
+  margin-bottom: 1.5em; }
+
 footer .links ul {
   list-style: none;
   padding: 0; }
