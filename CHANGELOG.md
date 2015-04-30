@@ -1,7 +1,11 @@
 # Changelog
 
-- add fitvids support, making all embeded videos responsive
+## 1.0.1-dev
 
-# 1.0.0
+- Added header deep link.
+- add fitvids support, making all embeded videos responsive
+- Updated gulp and it's dependencies
+
+## 1.0.0
 
 - remove discuss comment toggle

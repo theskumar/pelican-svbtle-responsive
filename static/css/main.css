@@ -336,6 +336,11 @@ hr {
 img {
   max-width: 100%; }
 
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  margin-top: 0;
+  padding-top: 0.8em; }
+
 main article {
   max-width: 640px;
   padding: 40px; }
@@ -547,6 +552,20 @@ main footer {
 
 .fluid-width-video-wrapper {
   margin-bottom: 1.5em; }
+
+.header-link {
+  position: absolute;
+  left: -1.3em;
+  opacity: 0;
+  color: #4d4d4d;
+  text-decoration: none !important;
+  font-size: 0.85em;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -ms-transition: opacity 0.2s linear; }
+
+h2:hover .header-link, h3:hover .header-link, h4:hover .header-link, h5:hover .header-link, h6:hover .header-link {
+  opacity: 1; }
 
 footer .links ul {
   list-style: none;

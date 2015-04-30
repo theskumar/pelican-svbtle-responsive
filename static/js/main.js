@@ -1,3 +1,15 @@
+// header link functionality
+$(function() {
+  return $('article').find("h2, h3, h4, h5, h6").each(function(i, el) {
+    var $el, icon, id;
+    $el = $(el);
+    id = $el.parent().attr('id');
+    if (id) {
+      return $el.append($("<a />").addClass("header-link icon-link").attr("href", "#" + id).html(""));
+    }
+  });
+});
+
 /* InstantClick 3.0.1 | (C) 2014 Alexandre Dieulot | http://instantclick.io/license.html */
 var InstantClick=function(e,g){function v(a){var c=a.indexOf("#");return 0>c?a:a.substr(0,c)}function y(a){for(;"A"!=a.nodeName;)a=a.parentNode;return a}function t(a,c){for(var b=0;b<D[a].length;b++)D[a][b](c)}function G(a,c,b,l){e.title=a;e.documentElement.replaceChild(c,e.body);if(b){history.pushState(null,null,b);a=b.indexOf("#");a=-1<a&&e.getElementById(b.substr(a+1));c=0;if(a)for(;a.offsetParent;)c+=a.offsetTop,a=a.offsetParent;scrollTo(0,c);m=v(b)}else scrollTo(0,l);H();z.done();t("change",
 !1)}function I(a){w(y(a.target).href)}function J(a){a=y(a.target);a.addEventListener("mouseout",Q);E?(K=a.href,r=setTimeout(w,E)):w(a.href)}function R(a){a=y(a.target);A?a.removeEventListener("mousedown",I):a.removeEventListener("mouseover",J);w(a.href)}function S(a){1<a.which||a.metaKey||a.ctrlKey||(a.preventDefault(),L(y(a.target).href))}function Q(){r?(clearTimeout(r),r=!1):u&&!h&&(p.abort(),h=u=!1)}function T(){if(!(4>p.readyState)&&0!=p.status){q.ready=+new Date-q.start;t("receive");if(p.getResponseHeader("Content-Type").match(/\/(x|ht|xht)ml/)){var a=
