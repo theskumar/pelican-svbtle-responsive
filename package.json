@@ -11,5 +11,8 @@
       "type": "MIT",
       "url": "https://raw.githubusercontent.com/theskumar/pelican-svbtle-responsive/master/LICENSE"
     }
-  ]
+  ],
+  "dependencies": {
+    "node-sass": "^2.1.1"
+  }
 }
