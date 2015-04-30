@@ -1,6 +1,6 @@
 // header link functionality
 $(function() {
-  return $('article').find("h2, h3, h4, h5, h6").each(function(i, el) {
+  return $('.page-single article').find("h2, h3, h4, h5, h6").each(function(i, el) {
     var $el, icon, id;
     $el = $(el);
     id = $el.parent().attr('id');

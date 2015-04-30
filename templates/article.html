@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block page_class %} article {% endblock page_class %}
+{% block page_class %} article page-single{% endblock page_class %}
 {% block title %}
 {{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %} · {{ super() }}
 {% endblock title %}
