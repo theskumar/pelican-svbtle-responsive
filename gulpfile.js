@@ -5,7 +5,7 @@ var gulp = require('gulp'),
 
 gulp.task('sass', function() {
   gulp.src('static/css/*.scss')
-    .pipe(watch())
+    .pipe(watch('static/css/*.scss'))
     .pipe(sass())
     .pipe(gulp.dest('static/css'))
     .pipe(livereload());
@@ -13,7 +13,7 @@ gulp.task('sass', function() {
 
 gulp.task('templates', function() {
   gulp.src('templates/**/*.html')
-    .pipe(watch())
+    .pipe(watch('templates/**/*.html'))
     .pipe(livereload());
 });
 
