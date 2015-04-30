@@ -33,16 +33,16 @@
     </p>
   </div>
 
-  {% if DISQUS_SITENAME %}
+    {% if DISQUS_SITENAME %}
     <div id="article_comments" style="display:{%if COLLAPSE_COMMENTS %}none{% else %}block{% endif %}">
         <div id="disqus_thread"></div>
         <script type="text/javascript">
-           var disqus_identifier = "{{ article.url }}";
-           (function() {
-           var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-           dsq.src = 'http://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-           (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-          })();
+            var disqus_identifier = "{{ article.url }}";
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
         </script>
     </div>
     {% endif %}
