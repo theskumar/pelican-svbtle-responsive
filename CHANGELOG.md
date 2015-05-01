@@ -3,6 +3,7 @@
 ## 1.0.1-dev
 
 ###Added
+- printer friendly pages
 - html meta `description` and `date` for articles
 - Clickable header deep link.
 - Fitvids support, making all embeded videos responsive

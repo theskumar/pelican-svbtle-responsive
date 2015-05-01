@@ -17,6 +17,7 @@ You can see the [theme in action](http://saurabh-kumar.com/blog/).
 - Twitter [cards][twitter-cards]
 - semantic tags for google, facebook and twitter
 - Responsive Videos using [fitvids][fitvids]
+- Printer friendly pages
 
 [pygments]: http://pygments.org/
 [twitter-cards]: https://dev.twitter.com/cards/overview
