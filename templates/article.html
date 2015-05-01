@@ -1,14 +1,15 @@
 {% extends "base.html" %}
 {% block page_class %} article page-single{% endblock page_class %}
-{% block title %}
-{{ article.title|striptags|e }} {%if article.subtitle %} - {{ article.subtitle|striptags|e }} {% endif %} · {{ super() }}
-{% endblock title %}
-
+{% block title -%}
+{{ article.title|striptags|e }}{%if article.subtitle %} - {{ article.subtitle|striptags|e }}{% endif %} · {{ super() }}
+{%- endblock title %}
 {% block head_meta_tag %}
-{{ super() }}
-{% if article.tags or article.category or article.keywords %}
+<meta name="description" content="{{article.summary|striptags|e}}">
+<meta name="date" content="{{article.date}}">
+{% if article.tags or article.category or article.keywords -%}
 <meta name="keywords" content="{{ [article.tags|join(', '), article.category, article.keywords]|join(', ') }}" />
-{% endif %}
+{{ super() }}
+{%- endif %}
 {% from 'modules/smo_metadata.html' import smo_metadata with context %}
 {{ smo_metadata(article) }}
 {% endblock head_meta_tag %}

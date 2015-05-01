@@ -2,9 +2,13 @@
 
 ## 1.0.1-dev
 
-- Added header deep link.
-- add fitvids support, making all embeded videos responsive
-- Updated gulp and it's dependencies
+###Added
+- html meta `description` and `date` for articles
+- Clickable header deep link.
+- Fitvids support, making all embeded videos responsive
+
+### Changed
+- Gulp and it's dependencies
 
 ## 1.0.0
 
