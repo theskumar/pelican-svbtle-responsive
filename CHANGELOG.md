@@ -9,6 +9,7 @@
 
 ### Changed
 - Gulp and it's dependencies
+- google analytics code as per html5boilerplate
 
 ## 1.0.0
 

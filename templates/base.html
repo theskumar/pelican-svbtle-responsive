@@ -39,8 +39,6 @@
 
   {% block head %}
   {% endblock %}
-
-  {% include "modules/analytics.html" %}
 </head>
 
 <body class="{% block page_class %}{% endblock %}">
@@ -144,5 +142,6 @@
     // initialize fitvids
     $(document).ready(function(){$("body").fitVids();});
   </script>
+  {% include "modules/analytics.html" %}
 </body>
 </html>
