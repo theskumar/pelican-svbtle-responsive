@@ -1,0 +1,880 @@
+/* line 4, ../_base.scss */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  color: #4d4d4d;
+  font-family: 'PT Sans', sans-serif;
+  font-size: 1.125em;
+}
+
+/* line 13, ../_base.scss */
+a {
+  color: #333332;
+  text-decoration: none;
+}
+
+/* line 18, ../_base.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 22, ../_base.scss */
+h1, h2, h3, h4, h5, h6 {
+  position: relative;
+  margin-top: 0;
+  padding-top: 0.8em;
+}
+
+/* line 1, ../_pygments.scss */
+.hll {
+  background-color: #ffffcc;
+}
+
+/* line 2, ../_pygments.scss */
+.c {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment */
+/* line 3, ../_pygments.scss */
+.err {
+  border: 1px solid #FF0000;
+}
+
+/* Error */
+/* line 4, ../_pygments.scss */
+.k {
+  color: #008000;
+  font-weight: bold;
+}
+
+/* Keyword */
+/* line 5, ../_pygments.scss */
+.o {
+  color: #666666;
+}
+
+/* Operator */
+/* line 6, ../_pygments.scss */
+.cm {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Multiline */
+/* line 7, ../_pygments.scss */
+.cp {
+  color: #BC7A00;
+}
+
+/* Comment.Preproc */
+/* line 8, ../_pygments.scss */
+.c1 {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Single */
+/* line 9, ../_pygments.scss */
+.cs {
+  color: #408080;
+  font-style: italic;
+}
+
+/* Comment.Special */
+/* line 10, ../_pygments.scss */
+.gd {
+  color: #A00000;
+}
+
+/* Generic.Deleted */
+/* line 11, ../_pygments.scss */
+.ge {
+  font-style: italic;
+}
+
+/* Generic.Emph */
+/* line 12, ../_pygments.scss */
+.gr {
+  color: #FF0000;
+}
+
+/* Generic.Error */
+/* line 13, ../_pygments.scss */
+.gh {
+  color: #000080;
+  font-weight: bold;
+}
+
+/* Generic.Heading */
+/* line 14, ../_pygments.scss */
+.gi {
+  color: #00A000;
+}
+
+/* Generic.Inserted */
+/* line 15, ../_pygments.scss */
+.go {
+  color: #888888;
+}
+
+/* Generic.Output */
+/* line 16, ../_pygments.scss */
+.gp {
+  color: #000080;
+  font-weight: bold;
+}
+
+/* Generic.Prompt */
+/* line 17, ../_pygments.scss */
+.gs {
+  font-weight: bold;
+}
+
+/* Generic.Strong */
+/* line 18, ../_pygments.scss */
+.gu {
+  color: #800080;
+  font-weight: bold;
+}
+
+/* Generic.Subheading */
+/* line 19, ../_pygments.scss */
+.gt {
+  color: #0044DD;
+}
+
+/* Generic.Traceback */
+/* line 20, ../_pygments.scss */
+.kc {
+  color: #008000;
+  font-weight: bold;
+}
+
+/* Keyword.Constant */
+/* line 21, ../_pygments.scss */
+.kd {
+  color: #008000;
+  font-weight: bold;
+}
+
+/* Keyword.Declaration */
+/* line 22, ../_pygments.scss */
+.kn {
+  color: #008000;
+  font-weight: bold;
+}
+
+/* Keyword.Namespace */
+/* line 23, ../_pygments.scss */
+.kp {
+  color: #008000;
+}
+
+/* Keyword.Pseudo */
+/* line 24, ../_pygments.scss */
+.kr {
+  color: #008000;
+  font-weight: bold;
+}
+
+/* Keyword.Reserved */
+/* line 25, ../_pygments.scss */
+.kt {
+  color: #B00040;
+}
+
+/* Keyword.Type */
+/* line 26, ../_pygments.scss */
+.m {
+  color: #666666;
+}
+
+/* Literal.Number */
+/* line 27, ../_pygments.scss */
+.s {
+  color: #BA2121;
+}
+
+/* Literal.String */
+/* line 28, ../_pygments.scss */
+.na {
+  color: #7D9029;
+}
+
+/* Name.Attribute */
+/* line 29, ../_pygments.scss */
+.nb {
+  color: #008000;
+}
+
+/* Name.Builtin */
+/* line 30, ../_pygments.scss */
+.nc {
+  color: #0000FF;
+  font-weight: bold;
+}
+
+/* Name.Class */
+/* line 31, ../_pygments.scss */
+.no {
+  color: #880000;
+}
+
+/* Name.Constant */
+/* line 32, ../_pygments.scss */
+.nd {
+  color: #AA22FF;
+}
+
+/* Name.Decorator */
+/* line 33, ../_pygments.scss */
+.ni {
+  color: #999999;
+  font-weight: bold;
+}
+
+/* Name.Entity */
+/* line 34, ../_pygments.scss */
+.ne {
+  color: #D2413A;
+  font-weight: bold;
+}
+
+/* Name.Exception */
+/* line 35, ../_pygments.scss */
+.nf {
+  color: #0000FF;
+}
+
+/* Name.Function */
+/* line 36, ../_pygments.scss */
+.nl {
+  color: #A0A000;
+}
+
+/* Name.Label */
+/* line 37, ../_pygments.scss */
+.nn {
+  color: #0000FF;
+  font-weight: bold;
+}
+
+/* Name.Namespace */
+/* line 38, ../_pygments.scss */
+.nt {
+  color: #008000;
+  font-weight: bold;
+}
+
+/* Name.Tag */
+/* line 39, ../_pygments.scss */
+.nv {
+  color: #19177C;
+}
+
+/* Name.Variable */
+/* line 40, ../_pygments.scss */
+.ow {
+  color: #AA22FF;
+  font-weight: bold;
+}
+
+/* Operator.Word */
+/* line 41, ../_pygments.scss */
+.w {
+  color: #bbbbbb;
+}
+
+/* Text.Whitespace */
+/* line 42, ../_pygments.scss */
+.mf {
+  color: #666666;
+}
+
+/* Literal.Number.Float */
+/* line 43, ../_pygments.scss */
+.mh {
+  color: #666666;
+}
+
+/* Literal.Number.Hex */
+/* line 44, ../_pygments.scss */
+.mi {
+  color: #666666;
+}
+
+/* Literal.Number.Integer */
+/* line 45, ../_pygments.scss */
+.mo {
+  color: #666666;
+}
+
+/* Literal.Number.Oct */
+/* line 46, ../_pygments.scss */
+.sb {
+  color: #BA2121;
+}
+
+/* Literal.String.Backtick */
+/* line 47, ../_pygments.scss */
+.sc {
+  color: #BA2121;
+}
+
+/* Literal.String.Char */
+/* line 48, ../_pygments.scss */
+.sd {
+  color: #BA2121;
+  font-style: italic;
+}
+
+/* Literal.String.Doc */
+/* line 49, ../_pygments.scss */
+.s2 {
+  color: #BA2121;
+}
+
+/* Literal.String.Double */
+/* line 50, ../_pygments.scss */
+.se {
+  color: #BB6622;
+  font-weight: bold;
+}
+
+/* Literal.String.Escape */
+/* line 51, ../_pygments.scss */
+.sh {
+  color: #BA2121;
+}
+
+/* Literal.String.Heredoc */
+/* line 52, ../_pygments.scss */
+.si {
+  color: #BB6688;
+  font-weight: bold;
+}
+
+/* Literal.String.Interpol */
+/* line 53, ../_pygments.scss */
+.sx {
+  color: #008000;
+}
+
+/* Literal.String.Other */
+/* line 54, ../_pygments.scss */
+.sr {
+  color: #BB6688;
+}
+
+/* Literal.String.Regex */
+/* line 55, ../_pygments.scss */
+.s1 {
+  color: #BA2121;
+}
+
+/* Literal.String.Single */
+/* line 56, ../_pygments.scss */
+.ss {
+  color: #19177C;
+}
+
+/* Literal.String.Symbol */
+/* line 57, ../_pygments.scss */
+.bp {
+  color: #008000;
+}
+
+/* Name.Builtin.Pseudo */
+/* line 58, ../_pygments.scss */
+.vc {
+  color: #19177C;
+}
+
+/* Name.Variable.Class */
+/* line 59, ../_pygments.scss */
+.vg {
+  color: #19177C;
+}
+
+/* Name.Variable.Global */
+/* line 60, ../_pygments.scss */
+.vi {
+  color: #19177C;
+}
+
+/* Name.Variable.Instance */
+/* line 61, ../_pygments.scss */
+.il {
+  color: #666666;
+}
+
+/* Literal.Number.Integer.Long */
+/* Import the font file with the icons in it */
+@font-face {
+  font-family: "icons";
+  src: url("../fonts/icons.eot");
+  src: url("../fonts/icons.eot?#iefix") format("embedded-opentype"), url("../fonts/icons.woff") format("woff"), url("../fonts/icons.ttf") format("truetype"), url("../fonts/icons.svg#icons") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* Apply these base styles to all icons */
+/* line 14, ../_icons.scss */
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "icons", "Open Sans", sans-serif;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  text-decoration: none !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Each icon is created by inserting the correct character into the
+   content of the :before pseudo element. Like a boss. */
+/* line 29, ../_icons.scss */
+.icon-ghost:before {
+  content: "\e000";
+}
+
+/* line 32, ../_icons.scss */
+.icon-feed:before {
+  content: "\e001";
+}
+
+/* line 35, ../_icons.scss */
+.icon-twitter:before {
+  content: "\e002";
+  font-size: 1.1em;
+}
+
+/* line 39, ../_icons.scss */
+.icon-google-plus:before {
+  content: "\e003";
+}
+
+/* line 42, ../_icons.scss */
+.icon-facebook:before {
+  content: "\e004";
+}
+
+/* line 45, ../_icons.scss */
+.icon-arrow-left:before {
+  content: "\e005";
+}
+
+/* line 48, ../_icons.scss */
+.icon-stats:before {
+  content: "\e006";
+}
+
+/* line 51, ../_icons.scss */
+.icon-location:before {
+  content: "\e007";
+  margin-left: -3px;
+  /* Tracking fix */
+}
+
+/* line 55, ../_icons.scss */
+.icon-link:before {
+  content: "\e008";
+}
+
+/* line 2, ../_global.scss */
+hr {
+  color: #eeeeee;
+  background-color: #eeeeee;
+  height: 1px;
+  border: none;
+}
+
+/* line 10, ../_global.scss */
+main article {
+  max-width: 640px;
+  padding: 40px;
+}
+/* line 14, ../_global.scss */
+main article #article_title h2 {
+  font-size: 1.8em;
+}
+/* line 17, ../_global.scss */
+main article #article_title h1 {
+  margin: 0 0 1em 0;
+  font-size: 2.2em;
+  color: #111;
+}
+/* line 22, ../_global.scss */
+main article #article_title a {
+  transition: all 0.1s linear;
+  border-bottom: 3px solid transparent;
+}
+/* line 25, ../_global.scss */
+main article #article_title a:hover {
+  color: #0e94ec;
+  border-bottom: 3px solid #0e94ec;
+}
+/* line 31, ../_global.scss */
+main article #article_text {
+  line-height: 1.375em;
+}
+/* line 33, ../_global.scss */
+main article #article_text a {
+  text-decoration: underline;
+}
+/* line 36, ../_global.scss */
+main article #article_text p:hover a, main article #article_text .section:hover a {
+  color: #427fed;
+}
+/* line 39, ../_global.scss */
+main article #article_text code {
+  margin: 2px;
+  padding: 0;
+  color: #333332;
+  font-size: 0.75em;
+  font-family: 'PT Mono', monospace;
+  background: #eeeeee;
+}
+/* line 47, ../_global.scss */
+main article #article_text pre {
+  margin: 10px 2px 10px 2px;
+  padding: 10px;
+  color: #333332;
+  border-left: 3px solid #0e94ec;
+  font-size: 0.75em;
+  font-family: 'PT Mono', monospace;
+  background: #eeeeee;
+  line-height: 1.125em;
+  overflow-x: auto;
+}
+/* line 58, ../_global.scss */
+main article #article_text blockquote {
+  margin: 22px 2px 22px 2px;
+  padding-left: 40px;
+  color: #999999;
+  font-style: italic;
+}
+/* line 64, ../_global.scss */
+main article #article_text .footnote-reference {
+  vertical-align: super;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 1;
+}
+/* line 70, ../_global.scss */
+main article #article_text .footnote {
+  font-size: smaller;
+}
+/* line 72, ../_global.scss */
+main article #article_text .footnote .fn-backref {
+  margin-right: 5px;
+  text-decoration: none;
+}
+/* line 77, ../_global.scss */
+main article #article_text iframe#twitter-widget-0 {
+  width: 89%;
+  margin: 0 auto !important;
+}
+/* line 82, ../_global.scss */
+main article #article_meta {
+  font-size: 0.625em;
+  color: #999999;
+}
+/* line 87, ../_global.scss */
+main footer {
+  padding: 40px;
+}
+/* line 89, ../_global.scss */
+main footer a.button_accent {
+  padding: 10px;
+  border: 2px solid #0e94ec;
+  border-radius: 20px;
+  -moz-border-radius: 20px;
+  -webkit-border-radius: 20px;
+  text-transform: uppercase;
+  color: #0e94ec;
+  font-size: 1.125em;
+}
+/* line 98, ../_global.scss */
+main footer a.button_accent:hover, main footer a.button_accent:active {
+  color: #ffffff;
+  background-color: #0e94ec;
+}
+
+@media screen and (min-width: 1024px) {
+  /* line 107, ../_global.scss */
+  aside {
+    width: 25%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    border-right: #eeeeee 1px solid;
+  }
+  /* line 114, ../_global.scss */
+  aside h2 {
+    margin: 10px 0 0 0;
+  }
+  /* line 117, ../_global.scss */
+  aside div#user_meta {
+    max-width: 192px;
+    text-align: right;
+  }
+  /* line 120, ../_global.scss */
+  aside div#user_meta ul li {
+    display: block;
+  }
+
+  /* line 125, ../_global.scss */
+  main {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  /* line 128, ../_global.scss */
+  main article {
+    margin: 0 auto;
+    max-width: 640px;
+  }
+}
+/* line 3, ../_article.scss */
+.article .title h1 {
+  margin: 0 0 0 0 !important;
+}
+/* line 6, ../_article.scss */
+.article .title time {
+  font-size: 0.5rem;
+}
+
+/* line 11, ../_article.scss */
+.main-nav {
+  position: relative;
+  padding: 35px 40px;
+  margin: 0 0 30px 0;
+}
+/* line 15, ../_article.scss */
+.main-nav a {
+  display: inline-block;
+  height: 34px;
+  padding: 0 20px;
+  border: transparent 1px solid;
+  color: #9EABB3;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 35px;
+  border-radius: 3px;
+  transition: all ease 0.3s;
+}
+/* line 27, ../_article.scss */
+.main-nav a:hover {
+  border-color: #bfc8cd;
+  color: #9EABB3;
+}
+/* line 32, ../_article.scss */
+.main-nav .subscribe-button {
+  float: right;
+}
+/* line 35, ../_article.scss */
+.main-nav .subscribe-button:before {
+  font-size: 9px;
+  margin-right: 6px;
+}
+
+/* line 3, ../_blog_list.scss */
+.blog-list .article_title h2 {
+  margin: 0 0 0.4em 0;
+}
+/* line 8, ../_blog_list.scss */
+.blog-list .article_summary .read-more {
+  text-decoration: none !important;
+}
+
+/* line 1, ../_ui.scss */
+.fluid-width-video-wrapper {
+  margin-bottom: 1.5em;
+}
+
+/* line 5, ../_ui.scss */
+.header-link {
+  position: absolute;
+  left: -1.3em;
+  opacity: 0;
+  color: #4d4d4d;
+  text-decoration: none !important;
+  font-size: 0.85em;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -ms-transition: opacity 0.2s linear;
+}
+
+/* line 18, ../_ui.scss */
+h2:hover .header-link,
+h3:hover .header-link,
+h4:hover .header-link,
+h5:hover .header-link,
+h6:hover .header-link {
+  opacity: 1;
+}
+
+/* line 3, ../_footer.scss */
+footer .links ul {
+  list-style: none;
+  padding: 0;
+}
+/* line 6, ../_footer.scss */
+footer .links ul li {
+  display: inline-block;
+}
+
+/* line 12, ../_footer.scss */
+#ending_message {
+  border-top: #eeeeee 1px solid;
+  padding: 0 40px 0 40px;
+  color: #999999;
+  font-size: 0.675em;
+  clear: both;
+}
+/* line 18, ../_footer.scss */
+#ending_message img {
+  vertical-align: top;
+}
+/* line 21, ../_footer.scss */
+#ending_message .copyright {
+  display: block;
+  width: 45%;
+  float: left;
+  margin: 10px 0;
+}
+/* line 27, ../_footer.scss */
+#ending_message .builtby {
+  display: block;
+  width: 45%;
+  float: right;
+  text-align: right;
+  margin: 10px 0;
+}
+
+/* line 1, ../_site_info.scss */
+.site_info {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+/* line 5, ../_site_info.scss */
+.site_info .logo {
+  max-width: 50px;
+  display: inline-block;
+}
+/* line 9, ../_site_info.scss */
+.site_info .info {
+  opacity: 0;
+  display: inline-block;
+  padding-left: 5px;
+  vertical-align: top;
+}
+/* line 14, ../_site_info.scss */
+.site_info .info h1, .site_info .info h2, .site_info .info p {
+  margin: 0;
+}
+/* line 17, ../_site_info.scss */
+.site_info .info h2 {
+  font-size: 15px;
+}
+/* line 20, ../_site_info.scss */
+.site_info .info p {
+  font-size: 10px;
+}
+/* line 24, ../_site_info.scss */
+.site_info:hover .info {
+  opacity: 1;
+}
+
+@media print {
+  /* line 2, ../_print.scss */
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
+       http://www.sanbeiji.com/archives/953 */
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  /* line 12, ../_print.scss */
+  a,
+  a:visited {
+    text-decoration: underline;
+  }
+
+  /* line 17, ../_print.scss */
+  a[href]:after {
+    content: " (" attr(href) ")";
+  }
+
+  /* line 21, ../_print.scss */
+  abbr[title]:after {
+    content: " (" attr(title) ")";
+  }
+
+  /*
+   * Don't show links that are fragment identifiers,
+   * or use the `javascript:` pseudo protocol
+   */
+  /* line 30, ../_print.scss */
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: "";
+  }
+
+  /* line 35, ../_print.scss */
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid;
+  }
+
+  /*
+   * Printing Tables:
+   * http://css-discuss.incutio.com/wiki/Printing_Tables
+   */
+  /* line 46, ../_print.scss */
+  thead {
+    display: table-header-group;
+  }
+
+  /* line 50, ../_print.scss */
+  tr,
+  img {
+    page-break-inside: avoid;
+  }
+
+  /* line 55, ../_print.scss */
+  img {
+    max-width: 100% !important;
+  }
+
+  /* line 59, ../_print.scss */
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3;
+  }
+
+  /* line 66, ../_print.scss */
+  h2,
+  h3 {
+    page-break-after: avoid;
+  }
+
+  /* line 71, ../_print.scss */
+  .subscribe-button, footer {
+    display: none;
+  }
+}

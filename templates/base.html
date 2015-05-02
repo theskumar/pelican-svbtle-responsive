@@ -26,7 +26,7 @@
 
   {% include "modules/pace.html" %}
 
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.f.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
 
@@ -45,27 +45,6 @@
     <nav class="main-nav">
         <a class="subscribe-button icon-feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Subscribe</a>
     </nav>
-  {% block sidebar %}
-  <nav id="dr-menu" class="dr-menu">
-      <div class="dr-trigger"><span class="dr-icon dr-icon-menu"></span><a class="dr-label">MENU</a></div>
-      <ul>
-        {% for title, link in MENUITEMS %}
-            <li><a href="{{ link }}">{{ title }}</a></li>
-        {% endfor %}
-        {% if DISPLAY_PAGES_ON_MENU %}{% for p in pages %}
-            <li><a href="{{ SITEURL }}/{{ p.url }}">{{ p.title }}</a></li>
-        {% endfor %}{% endif %}
-        {% for name, link in LINKS %}
-            <li><a href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-        {% for name, link in SOCIAL %}
-            <li><a class="dr-icon" href="{{ link }}" target="_blank">{{ name }}</a></li>
-        {% endfor %}
-      </ul>
-  </nav>
-
-  {% endblock sidebar %}
-
   <main>
 
     {% block content %}
@@ -101,40 +80,8 @@
   </div>
   {% include "modules/idl.html" %}
   {% include "modules/copy_text_plus.html" %}
-  <script>
-    var YTMenu = (function() {
-
-        function init() {
-
-            [].slice.call( document.querySelectorAll( '.dr-menu' ) ).forEach( function( el, i ) {
-
-                var trigger = el.querySelector( 'div.dr-trigger' ),
-                    icon = trigger.querySelector( 'span.dr-icon-menu' ),
-                    open = false;
-
-                trigger.addEventListener( 'click', function( event ) {
-                    if( !open ) {
-                        el.className += ' dr-menu-open';
-                        open = true;
-                    }
-                }, false );
-
-                icon.addEventListener( 'click', function( event ) {
-                    if( open ) {
-                        event.stopPropagation();
-                        open = false;
-                        el.className = el.className.replace(/\bdr-menu-open\b/,'');
-                        return false;
-                    }
-                }, false );
-            } );
-        }
-        init();
-    })();
-  </script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" data-no-instant></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/fitvids/1.1.0/jquery.fitvids.min.js" data-no-instant></script>
-  <script src="{{ SITEURL }}/theme/js/main.js" data-no-instant></script>
+  <script src="{{ SITEURL }}/theme/js/main.min.js" data-no-instant></script>
   <script data-no-instant>
     InstantClick.init();
   </script>
