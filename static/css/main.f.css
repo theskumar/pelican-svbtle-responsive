@@ -708,6 +708,12 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
   .travel main .full img {
     width: 100%;
   }
+  /* line 137, ../_global.scss */
+  .travel main .blogPosting-meta, .travel main .blogPosting-comment {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 /* line 2, ../_article.scss */
 .blogPosting-title h1 {

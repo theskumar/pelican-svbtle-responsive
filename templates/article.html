@@ -4,14 +4,18 @@
 {{ article.title|striptags|e }}{%if article.subtitle %} - {{ article.subtitle|striptags|e }}{% endif %} · {{ super() }}
 {%- endblock title %}
 {% block head_meta_tag %}
+
 <meta name="description" content="{{article.summary|striptags|e}}">
 <meta name="date" content="{{article.date}}">
+
 {% if article.tags or article.category or article.keywords -%}
 <meta name="keywords" content="{{ [article.tags|join(', '), article.category, article.keywords]|join(', ') }}" />
 {{ super() }}
 {%- endif %}
+
 {% from 'modules/smo_metadata.html' import smo_metadata with context %}
 {{ smo_metadata(article) }}
+
 {% endblock head_meta_tag %}
 
 {% block featured_image %}
@@ -42,7 +46,9 @@
   <div id="article_text" itemprop="articleBody" class='blogPosting-text'>
     {{ article.content }}
   </div>
-  <div id="article_meta" class='blogPosting--meta'>
+
+  {% if not article.featured_image %}
+  <div id="article_meta" class='blogPosting-meta'>
     <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     {% if article.tags %} Tags:
       {% for tag in article.tags %}
@@ -51,11 +57,12 @@
     {% endif %}
     </p>
   </div>
+  {% endif %}
 
     {% if DISQUS_SITENAME %}
-    <div id="article_comments" style="display:{%if COLLAPSE_COMMENTS %}none{% else %}block{% endif %}">
+    <div class='blogPosting-comment' id="article_comments" style="display:{%if COLLAPSE_COMMENTS %}none{% else %}block{% endif %}">
         <div id="disqus_thread"></div>
-        <script type="text/javascript">
+        <script>
             var disqus_identifier = "{{ article.url }}";
             (function() {
                 var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;

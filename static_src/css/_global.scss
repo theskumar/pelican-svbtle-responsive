@@ -134,5 +134,10 @@ main {
         .full img {
             width: 100%;
         }
+        .blogPosting-meta, .blogPosting-comment {
+            max-width: $normal_width;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 }
