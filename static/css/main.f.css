@@ -1,4 +1,17 @@
-/* line 4, ../_base.scss */
+/* apply a natural box layout model to all elements, but allowing components to change */
+/* line 6, ../_base.scss */
+html {
+  box-sizing: border-box;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+/* line 12, ../_base.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 17, ../_base.scss */
 body {
   margin: 0;
   padding: 0;
@@ -8,22 +21,31 @@ body {
   font-size: 1.125em;
 }
 
-/* line 13, ../_base.scss */
+/* line 26, ../_base.scss */
 a {
   color: #333332;
   text-decoration: none;
 }
 
-/* line 18, ../_base.scss */
+/* line 31, ../_base.scss */
 img {
   max-width: 100%;
+  border: 0;
 }
 
-/* line 22, ../_base.scss */
+/* line 36, ../_base.scss */
 h1, h2, h3, h4, h5, h6 {
   position: relative;
   margin-top: 0;
   padding-top: 0.8em;
+}
+
+/* line 42, ../_base.scss */
+hr {
+  color: #eeeeee;
+  background-color: #eeeeee;
+  height: 1px;
+  border: none;
 }
 
 /* line 1, ../_pygments.scss */
@@ -485,52 +507,47 @@ h1, h2, h3, h4, h5, h6 {
   content: "\e008";
 }
 
-/* line 2, ../_global.scss */
-hr {
-  color: #eeeeee;
-  background-color: #eeeeee;
-  height: 1px;
-  border: none;
+/* line 1, ../_global.scss */
+main {
+  padding-top: 4em;
 }
-
-/* line 10, ../_global.scss */
+/* line 4, ../_global.scss */
 main article {
-  max-width: 640px;
   padding: 40px;
 }
-/* line 14, ../_global.scss */
+/* line 7, ../_global.scss */
 main article #article_title h2 {
   font-size: 1.8em;
 }
-/* line 17, ../_global.scss */
+/* line 10, ../_global.scss */
 main article #article_title h1 {
   margin: 0 0 1em 0;
   font-size: 2.2em;
   color: #111;
 }
-/* line 22, ../_global.scss */
+/* line 15, ../_global.scss */
 main article #article_title a {
   transition: all 0.1s linear;
   border-bottom: 3px solid transparent;
 }
-/* line 25, ../_global.scss */
+/* line 18, ../_global.scss */
 main article #article_title a:hover {
   color: #0e94ec;
   border-bottom: 3px solid #0e94ec;
 }
-/* line 31, ../_global.scss */
+/* line 24, ../_global.scss */
 main article #article_text {
   line-height: 1.375em;
 }
-/* line 33, ../_global.scss */
+/* line 26, ../_global.scss */
 main article #article_text a {
   text-decoration: underline;
 }
-/* line 36, ../_global.scss */
+/* line 29, ../_global.scss */
 main article #article_text p:hover a, main article #article_text .section:hover a {
   color: #427fed;
 }
-/* line 39, ../_global.scss */
+/* line 32, ../_global.scss */
 main article #article_text code {
   margin: 2px;
   padding: 0;
@@ -539,7 +556,7 @@ main article #article_text code {
   font-family: 'PT Mono', monospace;
   background: #eeeeee;
 }
-/* line 47, ../_global.scss */
+/* line 40, ../_global.scss */
 main article #article_text pre {
   margin: 10px 2px 10px 2px;
   padding: 10px;
@@ -551,44 +568,44 @@ main article #article_text pre {
   line-height: 1.125em;
   overflow-x: auto;
 }
-/* line 58, ../_global.scss */
+/* line 51, ../_global.scss */
 main article #article_text blockquote {
   margin: 22px 2px 22px 2px;
   padding-left: 40px;
   color: #999999;
   font-style: italic;
 }
-/* line 64, ../_global.scss */
+/* line 57, ../_global.scss */
 main article #article_text .footnote-reference {
   vertical-align: super;
   font-size: 12px;
   text-decoration: none;
   line-height: 1;
 }
-/* line 70, ../_global.scss */
+/* line 63, ../_global.scss */
 main article #article_text .footnote {
   font-size: smaller;
 }
-/* line 72, ../_global.scss */
+/* line 65, ../_global.scss */
 main article #article_text .footnote .fn-backref {
   margin-right: 5px;
   text-decoration: none;
 }
-/* line 77, ../_global.scss */
+/* line 70, ../_global.scss */
 main article #article_text iframe#twitter-widget-0 {
   width: 89%;
   margin: 0 auto !important;
 }
-/* line 82, ../_global.scss */
+/* line 75, ../_global.scss */
 main article #article_meta {
   font-size: 0.625em;
   color: #999999;
 }
-/* line 87, ../_global.scss */
+/* line 80, ../_global.scss */
 main footer {
   padding: 40px;
 }
-/* line 89, ../_global.scss */
+/* line 82, ../_global.scss */
 main footer a.button_accent {
   padding: 10px;
   border: 2px solid #0e94ec;
@@ -599,14 +616,14 @@ main footer a.button_accent {
   color: #0e94ec;
   font-size: 1.125em;
 }
-/* line 98, ../_global.scss */
+/* line 91, ../_global.scss */
 main footer a.button_accent:hover, main footer a.button_accent:active {
   color: #ffffff;
   background-color: #0e94ec;
 }
 
 @media screen and (min-width: 1024px) {
-  /* line 107, ../_global.scss */
+  /* line 100, ../_global.scss */
   aside {
     width: 25%;
     height: 100%;
@@ -615,75 +632,71 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
     left: 0;
     border-right: #eeeeee 1px solid;
   }
-  /* line 114, ../_global.scss */
+  /* line 107, ../_global.scss */
   aside h2 {
     margin: 10px 0 0 0;
   }
-  /* line 117, ../_global.scss */
+  /* line 110, ../_global.scss */
   aside div#user_meta {
     max-width: 192px;
     text-align: right;
   }
-  /* line 120, ../_global.scss */
+  /* line 113, ../_global.scss */
   aside div#user_meta ul li {
     display: block;
   }
 
-  /* line 125, ../_global.scss */
+  /* line 118, ../_global.scss */
   main {
     max-width: 700px;
     margin: 0 auto;
   }
-  /* line 128, ../_global.scss */
+  /* line 121, ../_global.scss */
   main article {
     margin: 0 auto;
     max-width: 640px;
   }
+
+  /* line 126, ../_global.scss */
+  .travel main {
+    max-width: 1200px;
+  }
+  /* line 128, ../_global.scss */
+  .travel main article {
+    margin: 0 auto;
+    max-width: 1200px;
+  }
 }
-/* line 3, ../_article.scss */
-.article .title h1 {
+/* line 2, ../_article.scss */
+.blogPosting-title h1 {
   margin: 0 0 0 0 !important;
 }
-/* line 6, ../_article.scss */
-.article .title time {
+/* line 5, ../_article.scss */
+.blogPosting-title time {
   font-size: 0.5rem;
 }
 
-/* line 11, ../_article.scss */
-.main-nav {
-  position: relative;
-  padding: 35px 40px;
-  margin: 0 0 30px 0;
-}
-/* line 15, ../_article.scss */
-.main-nav a {
-  display: inline-block;
-  height: 34px;
-  padding: 0 20px;
-  border: transparent 1px solid;
-  color: #9EABB3;
+/* line 10, ../_article.scss */
+.blogPosting-text h1, .blogPosting-text h2 {
   text-align: center;
-  font-size: 12px;
-  text-transform: uppercase;
-  line-height: 35px;
-  border-radius: 3px;
-  transition: all ease 0.3s;
-}
-/* line 27, ../_article.scss */
-.main-nav a:hover {
-  border-color: #bfc8cd;
-  color: #9EABB3;
-}
-/* line 32, ../_article.scss */
-.main-nav .subscribe-button {
-  float: right;
-}
-/* line 35, ../_article.scss */
-.main-nav .subscribe-button:before {
-  font-size: 9px;
-  margin-right: 6px;
 }
 
+/* line 14, ../_article.scss */
+.blogPosting-featured_image {
+  width: 100%;
+  height: 600px;
+  height: 100vh;
+  background-size: cover;
+  background-position: top center;
+}
+
+@media screen and (max-width: 600px) {
+  /* line 22, ../_article.scss */
+  .blogPosting-featured_image {
+    height: 400px;
+    height: 60vh;
+  }
+}
 /* line 3, ../_blog_list.scss */
 .blog-list .article_title h2 {
   margin: 0 0 0.4em 0;
@@ -691,6 +704,366 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
 /* line 8, ../_blog_list.scss */
 .blog-list .article_summary .read-more {
   text-decoration: none !important;
+}
+
+/*!
+ * Justified Gallery - v3.5.4
+ * http://miromannino.github.io/Justified-Gallery/
+ * Copyright (c) 2015 Miro Mannino
+ * Licensed under the MIT license.
+ */
+@-webkit-keyframes justified-gallery-show-caption-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .7;
+  }
+}
+@keyframes justified-gallery-show-caption-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: .7;
+  }
+}
+@-webkit-keyframes justified-gallery-show-entry-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes justified-gallery-show-entry-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery > a, .justified-gallery > div {
+  position: absolute;
+  display: inline-block;
+  overflow: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+}
+
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery > a > img, .justified-gallery > div > img, .justified-gallery > a > a > img, .justified-gallery > div > a > img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery > a > .caption, .justified-gallery > div > .caption {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  padding: 5px;
+  background-color: #000;
+  left: 0;
+  right: 0;
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 300;
+  font-family: sans-serif;
+}
+
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery > a > .caption.caption-visible, .justified-gallery > div > .caption.caption-visible {
+  display: initial;
+  opacity: .7;
+  filter: "alpha(opacity=70)";
+  -webkit-animation: justified-gallery-show-caption-animation 500ms 0 ease;
+  -moz-animation: justified-gallery-show-caption-animation 500ms 0 ease;
+  -ms-animation: justified-gallery-show-caption-animation 500ms 0 ease;
+}
+
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery > .entry-visible {
+  opacity: 1;
+  filter: alpha(opacity=100);
+  -webkit-animation: justified-gallery-show-entry-animation 500ms 0 ease;
+  -moz-animation: justified-gallery-show-entry-animation 500ms 0 ease;
+  -ms-animation: justified-gallery-show-entry-animation 500ms 0 ease;
+}
+
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery > .spinner {
+  position: absolute;
+  bottom: 0;
+  margin-left: -24px;
+  padding: 10px 0;
+  left: 50%;
+  opacity: initial;
+  -webkit-filter: initial;
+          filter: initial;
+  overflow: initial;
+}
+
+/* line 7, ../includes/_justified_gallery.scss */
+.justified-gallery > .spinner > span {
+  display: inline-block;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  width: 8px;
+  height: 8px;
+  margin: 0 4px;
+  background-color: #000;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 6px;
+}
+
+/*
+    Colorbox Core Style:
+    The following CSS is consistent between example themes and should not be altered.
+*/
+/* line 5, ../includes/_colorbox.scss */
+#colorbox, #cboxOverlay, #cboxWrapper {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  overflow: hidden;
+}
+
+/* line 6, ../includes/_colorbox.scss */
+#cboxWrapper {
+  max-width: none;
+}
+
+/* line 7, ../includes/_colorbox.scss */
+#cboxOverlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 8, ../includes/_colorbox.scss */
+#cboxMiddleLeft, #cboxBottomLeft {
+  clear: left;
+}
+
+/* line 9, ../includes/_colorbox.scss */
+#cboxContent {
+  position: relative;
+}
+
+/* line 10, ../includes/_colorbox.scss */
+#cboxLoadedContent {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* line 11, ../includes/_colorbox.scss */
+#cboxTitle {
+  margin: 0;
+}
+
+/* line 12, ../includes/_colorbox.scss */
+#cboxLoadingOverlay, #cboxLoadingGraphic {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 13, ../includes/_colorbox.scss */
+#cboxPrevious, #cboxNext, #cboxClose, #cboxSlideshow {
+  cursor: pointer;
+}
+
+/* line 14, ../includes/_colorbox.scss */
+.cboxPhoto {
+  float: left;
+  margin: auto;
+  border: 0;
+  display: block;
+  max-width: none;
+  -ms-interpolation-mode: bicubic;
+}
+
+/* line 15, ../includes/_colorbox.scss */
+.cboxIframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+/* line 16, ../includes/_colorbox.scss */
+#colorbox, #cboxContent, #cboxLoadedContent {
+  box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+}
+
+/*
+    User Style:
+    Change the following styles to modify the appearance of Colorbox.  They are
+    ordered & tabbed in a way that represents the nesting of the generated HTML.
+*/
+/* line 23, ../includes/_colorbox.scss */
+#cboxOverlay {
+  background: #fff;
+}
+
+/* line 24, ../includes/_colorbox.scss */
+#colorbox {
+  outline: 0;
+}
+
+/* line 25, ../includes/_colorbox.scss */
+#cboxContent {
+  margin-top: 32px;
+  overflow: visible;
+  background: #000;
+}
+
+/* line 26, ../includes/_colorbox.scss */
+.cboxIframe {
+  background: #fff;
+}
+
+/* line 27, ../includes/_colorbox.scss */
+#cboxError {
+  padding: 50px;
+  border: 1px solid #ccc;
+}
+
+/* line 28, ../includes/_colorbox.scss */
+#cboxLoadedContent {
+  background: #000;
+  padding: 1px;
+}
+
+/* line 29, ../includes/_colorbox.scss */
+#cboxLoadingGraphic {
+  background: url(images/loading.gif) no-repeat center center;
+}
+
+/* line 30, ../includes/_colorbox.scss */
+#cboxLoadingOverlay {
+  background: #000;
+}
+
+/* line 31, ../includes/_colorbox.scss */
+#cboxTitle {
+  position: absolute;
+  top: -22px;
+  left: 0;
+  color: #000;
+}
+
+/* line 32, ../includes/_colorbox.scss */
+#cboxCurrent {
+  position: absolute;
+  top: -22px;
+  right: 205px;
+  text-indent: -9999px;
+}
+
+/* these elements are buttons, and may need to have additional styles reset to avoid unwanted base styles */
+/* line 35, ../includes/_colorbox.scss */
+#cboxPrevious, #cboxNext, #cboxSlideshow, #cboxClose {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  overflow: visible;
+  text-indent: -9999px;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: -20px;
+  background: url(../images/controls.png) no-repeat 0 0;
+}
+
+/* avoid outlines on :active (mouseclick), but preserve outlines on :focus (tabbed navigating) */
+/* line 38, ../includes/_colorbox.scss */
+#cboxPrevious:active, #cboxNext:active, #cboxSlideshow:active, #cboxClose:active {
+  outline: 0;
+}
+
+/* line 40, ../includes/_colorbox.scss */
+#cboxPrevious {
+  background-position: 0px 0px;
+  right: 44px;
+}
+
+/* line 41, ../includes/_colorbox.scss */
+#cboxPrevious:hover {
+  background-position: 0px -25px;
+}
+
+/* line 42, ../includes/_colorbox.scss */
+#cboxNext {
+  background-position: -25px 0px;
+  right: 22px;
+}
+
+/* line 43, ../includes/_colorbox.scss */
+#cboxNext:hover {
+  background-position: -25px -25px;
+}
+
+/* line 44, ../includes/_colorbox.scss */
+#cboxClose {
+  background-position: -50px 0px;
+  right: 0;
+}
+
+/* line 45, ../includes/_colorbox.scss */
+#cboxClose:hover {
+  background-position: -50px -25px;
+}
+
+/* line 46, ../includes/_colorbox.scss */
+.cboxSlideshow_on #cboxPrevious, .cboxSlideshow_off #cboxPrevious {
+  right: 66px;
+}
+
+/* line 47, ../includes/_colorbox.scss */
+.cboxSlideshow_on #cboxSlideshow {
+  background-position: -75px -25px;
+  right: 44px;
+}
+
+/* line 48, ../includes/_colorbox.scss */
+.cboxSlideshow_on #cboxSlideshow:hover {
+  background-position: -100px -25px;
+}
+
+/* line 49, ../includes/_colorbox.scss */
+.cboxSlideshow_off #cboxSlideshow {
+  background-position: -100px 0px;
+  right: 44px;
+}
+
+/* line 50, ../includes/_colorbox.scss */
+.cboxSlideshow_off #cboxSlideshow:hover {
+  background-position: -75px -25px;
 }
 
 /* line 1, ../_ui.scss */
@@ -720,37 +1093,77 @@ h6:hover .header-link {
   opacity: 1;
 }
 
-/* line 3, ../_footer.scss */
+/* line 27, ../_ui.scss */
+.subscribe {
+  position: absolute;
+  padding: 35px 40px;
+  margin: 0 0 30px 0;
+  right: 0;
+  top: 0;
+}
+/* line 33, ../_ui.scss */
+.subscribe a {
+  display: inline-block;
+  height: 34px;
+  padding: 0 20px;
+  border: transparent 1px solid;
+  color: #9EABB3;
+  text-align: center;
+  font-size: 12px;
+  text-transform: uppercase;
+  line-height: 35px;
+  border-radius: 3px;
+  transition: all ease 0.3s;
+}
+/* line 45, ../_ui.scss */
+.subscribe a:hover {
+  border-color: #bfc8cd;
+  color: #9EABB3;
+}
+/* line 50, ../_ui.scss */
+.subscribe .subscribe-button {
+  float: right;
+}
+/* line 53, ../_ui.scss */
+.subscribe .subscribe-button:before {
+  font-size: 9px;
+  margin-right: 6px;
+}
+
+/* line 1, ../_footer.scss */
+footer {
+  clear: both;
+}
+/* line 4, ../_footer.scss */
 footer .links ul {
   list-style: none;
   padding: 0;
 }
-/* line 6, ../_footer.scss */
+/* line 7, ../_footer.scss */
 footer .links ul li {
   display: inline-block;
 }
-
 /* line 12, ../_footer.scss */
-#ending_message {
+footer #ending_message {
   border-top: #eeeeee 1px solid;
-  padding: 0 40px 0 40px;
+  padding: 0px 40px 10px 40px;
   color: #999999;
   font-size: 0.675em;
   clear: both;
 }
 /* line 18, ../_footer.scss */
-#ending_message img {
+footer #ending_message img {
   vertical-align: top;
 }
 /* line 21, ../_footer.scss */
-#ending_message .copyright {
+footer #ending_message .copyright {
   display: block;
   width: 45%;
   float: left;
   margin: 10px 0;
 }
 /* line 27, ../_footer.scss */
-#ending_message .builtby {
+footer #ending_message .builtby {
   display: block;
   width: 45%;
   float: right;
@@ -763,32 +1176,33 @@ footer .links ul li {
   position: fixed;
   top: 10px;
   left: 10px;
+  z-index: 3;
 }
-/* line 5, ../_site_info.scss */
+/* line 6, ../_site_info.scss */
 .site_info .logo {
   max-width: 50px;
   display: inline-block;
 }
-/* line 9, ../_site_info.scss */
+/* line 10, ../_site_info.scss */
 .site_info .info {
   opacity: 0;
   display: inline-block;
   padding-left: 5px;
   vertical-align: top;
 }
-/* line 14, ../_site_info.scss */
+/* line 15, ../_site_info.scss */
 .site_info .info h1, .site_info .info h2, .site_info .info p {
   margin: 0;
 }
-/* line 17, ../_site_info.scss */
+/* line 18, ../_site_info.scss */
 .site_info .info h2 {
   font-size: 15px;
 }
-/* line 20, ../_site_info.scss */
+/* line 21, ../_site_info.scss */
 .site_info .info p {
   font-size: 10px;
 }
-/* line 24, ../_site_info.scss */
+/* line 25, ../_site_info.scss */
 .site_info:hover .info {
   opacity: 1;
 }

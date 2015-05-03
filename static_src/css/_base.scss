@@ -1,5 +1,18 @@
 $font_color: #4d4d4d;
 $link_color: #333332;
+$line_color: #eeeeee;
+
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+  box-sizing: border-box;
+   -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
 
 body {
   margin: 0;
@@ -17,10 +30,18 @@ a {
 
 img {
   max-width: 100%;
+  border: 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
     position: relative;
     margin-top: 0;
     padding-top: 0.8em;
+}
+
+hr {
+  color: $line_color;
+  background-color: $line_color;
+  height: 1px;
+  border: none;
 }

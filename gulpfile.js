@@ -48,6 +48,7 @@ gulp.task('styles', function() {
 gulp.task('scripts', function() {
     return gulp.src([
             'static_src/js/plugins/plugins.js',
+            'static_src/js/plugins/*.js',
             'static_src/js/g.js',
             'static_src/js/partials/*.js',
             'static_src/js/main.js'

@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% block page_class %} article page-single{% endblock page_class %}
+{% block page_class %} article page-single {% if article.featured_image %}has-featured-image{% endif %} {{article.category}}{% endblock page_class %}
 {% block title -%}
 {{ article.title|striptags|e }}{%if article.subtitle %} - {{ article.subtitle|striptags|e }}{% endif %} · {{ super() }}
 {%- endblock title %}
@@ -14,17 +14,22 @@
 {{ smo_metadata(article) }}
 {% endblock head_meta_tag %}
 
+{% block featured_image %}
+{% if article.featured_image %}
+    <div class="blogPosting-featured_image" style="background-image: url({{article.featured_image}})"></div>
+{% endif %}
+{% endblock featured_image %}
 
 {% block content %}
-<article itemscope itemtype="http://schema.org/BlogPosting">
-  <div id="article_title" class='title'>
+<article itemscope itemtype="http://schema.org/BlogPosting" class='blogPosting'>
+  <div id="article_title" class='title blogPosting-title'">
     <h1 itemprop="headline">{{ article.title }}</h1>
     <time datetime="{{article.date}}" itemprop="datePublished">{{ article.locale_date }}</time>.
   </div>
-  <div id="article_text" itemprop="articleBody">
+  <div id="article_text" itemprop="articleBody" class='blogPosting-text'>
     {{ article.content }}
   </div>
-  <div id="article_meta">
+  <div id="article_meta" class='blogPosting--meta'>
     <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
     {% if article.tags %} Tags:
       {% for tag in article.tags %}

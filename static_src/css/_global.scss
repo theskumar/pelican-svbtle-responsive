@@ -1,14 +1,7 @@
-
-hr {
-  color: #eeeeee;
-  background-color: #eeeeee;
-  height: 1px;
-  border: none;
-}
-
 main {
+  padding-top: 4em;
+
   article {
-    max-width: 640px;
     padding: 40px;
       #article_title {
         h2 {
@@ -128,6 +121,13 @@ main {
     article {
       margin: 0 auto;
       max-width: 640px;
+    }
+  }
+  .travel main {
+    max-width: 1200px;
+    article {
+      margin: 0 auto;
+      max-width: 1200px;
     }
   }
 }

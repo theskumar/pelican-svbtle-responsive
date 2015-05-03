@@ -26,7 +26,7 @@
 
   {% include "modules/pace.html" %}
 
-  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.f.min.css">
+  <link rel="stylesheet" href="{{ SITEURL }}/theme/css/main.f.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Sans|PT+Serif|PT+Mono">
 
 
@@ -42,46 +42,49 @@
 </head>
 
 <body class="{% block page_class %}{% endblock %}">
-    <nav class="main-nav">
-        <a class="subscribe-button icon-feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Subscribe</a>
-    </nav>
-  <main>
 
+    <header>
+        <div class='site_info'>
+          <a href="{{ SITEURL }}" class='logo'>
+            {% if USER_LOGO_URL %}
+                <img src="{{ USER_LOGO_URL }}" alt="logo">
+            {% else %}
+                <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
+            {% endif %}
+          </a>
+          <div class="info">
+            <h2><a href="{{ SITEURL }}">{{ SITENAME }}</a></h2>
+            <p>{{ TAGLINE }}</p>
+          </div>
+        </div>
+
+        <div class="subscribe">
+            <a class="subscribe-button icon-feed" href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}">Subscribe</a>
+        </div>
+    </header>
+    {% block featured_image %} {% endblock featured_image %}
+
+    <main role=main>
     {% block content %}
     {% endblock %}
-
+    </main>
     <footer>
-      {% block footer %}
-      {% endblock %}
+        {% block footer %}
+        {% endblock %}
+        <div id="ending_message" class='clearfix'>
+            <section class='copyright'>
+                <a rel="license" target="blank" href="https://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
+            </section>
+            <section class='builtby'>
+                Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Saurabh Kumar on <a href="https://github.com/theskumar/pelican-svbtle-responsive" target="_blank">github</a>.
+            </section>
+        </div>
     </footer>
 
-    <div class='site_info'>
-      <a href="{{ SITEURL }}" class='logo'>
-        {% if USER_LOGO_URL %}
-            <img src="{{ USER_LOGO_URL }}" alt="logo">
-        {% else %}
-            <img src="{{ SITEURL }}/theme/images/logo.png" alt="logo">
-        {% endif %}
-      </a>
-      <div class="info">
-        <h2><a href="{{ SITEURL }}">{{ SITENAME }}</a></h2>
-        <p>{{ TAGLINE }}</p>
-      </div>
-    </div>
-  </main>
-  <div id="ending_message" class='clearfix'>
-    <section class='copyright'>
-        <a rel="license" target="blank" href="https://creativecommons.org/licenses/by/4.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a>
-    </section>
-    <section class='builtby'>
-        Built using <a href="http://getpelican.com" target="_blank">Pelican</a>. Theme by Saurabh Kumar on <a href="https://github.com/theskumar/pelican-svbtle-responsive" target="_blank">github</a>.
-    </section>
-
-  </div>
   {% include "modules/idl.html" %}
   {% include "modules/copy_text_plus.html" %}
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js" data-no-instant></script>
-  <script src="{{ SITEURL }}/theme/js/main.min.js" data-no-instant></script>
+  <script src="{{ SITEURL }}/theme/js/main.min.js"></script>
   <script data-no-instant>
     InstantClick.init();
   </script>

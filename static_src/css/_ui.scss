@@ -22,3 +22,37 @@ h5:hover .header-link,
 h6:hover .header-link {
   opacity: 1;
 }
+
+
+.subscribe {
+    position: absolute;
+    padding: 35px 40px;
+    margin: 0 0 30px 0;
+    right: 0;
+    top: 0;
+    a {
+        display: inline-block;
+        height: 34px;
+        padding: 0 20px;
+        border: transparent 1px solid;
+        color: #9EABB3;
+        text-align: center;
+        font-size: 12px;
+        text-transform: uppercase;
+        line-height: 35px;
+        border-radius: 3px;
+        transition: all ease 0.3s;
+        &:hover{
+            border-color: #bfc8cd;
+            color: #9EABB3;
+        }
+    }
+    .subscribe-button {
+        float: right;
+
+        &:before {
+            font-size: 9px;
+            margin-right: 6px;
+        }
+    }
+}
