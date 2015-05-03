@@ -12,7 +12,7 @@ $(function() {
         'rowHeight': 150
         , 'captions': false
         , 'lastRow': 'justify'
-        , 'margins' : 5
+        , 'margins' : 10
         , 'maxRowHeight': -1
     }).on('jg.complete', function () {
         $(this).find('a').colorbox({

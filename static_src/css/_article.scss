@@ -12,15 +12,108 @@
     }
 }
 .blogPosting-featured_image {
+    position: relative;
     width: 100%;
     height: 600px;
     height: 100vh;
     background-size: cover;
     background-position: top center;
+
+    .featured_image--info_box {
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        margin-top: -200px;
+        text-shadow: 0px 1px 1px #222;
+        padding: 40px;
+        width: $normal_width;
+        margin-left: -$normal_width/2;
+        text-align: center;
+        h1 {
+            text-transform: uppercase;
+            font-size: 5em;
+            font-size: 4.9vw;
+            line-height: 6vw;
+        }
+        .summary {
+            font-size: 45px;
+            font-size: 2.5vw;
+            font-family: "adobe-garamond-pro", serif;
+            font-weight: 400;
+            font-style: italic;
+        }
+        a {
+            color: white;
+            border-bottom: 1px solid white;
+            font-family: "adobe-garamond-pro", serif;
+            letter-spacing: 2px;
+            font-size: normal;
+            text-transform: uppercase;
+        }
+        time {
+            font-size: 15px;
+            font-family: "adobe-garamond-pro", serif;
+            letter-spacing: 2px;
+            font-size: normal;
+            text-transform: uppercase;
+        }
+
+    }
 }
+.travel .featured_image--info_box {
+    width: $travel_width;
+    margin-left: -$travel_width/2;
+}
+
+.travel {
+    h1, h2, h3, h4, #article_text > p {
+        max-width: 900px;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 3%;
+    }
+    h2 {
+      line-height: normal;
+      font-size: 39px;
+      -webkit-animation: fadeIn;
+      -webkit-animation-fill-mode: both;
+      -moz-animation-fill-mode: both;
+      -ms-animation-fill-mode: both;
+      -o-animation-fill-mode: both;
+      animation-fill-mode: both;
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      -ms-animation-duration: 0.5s;
+      -o-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+    }
+}
+
+
 @media screen and (max-width: 600px) {
+    main article {
+        padding: 10px;
+    }
     .blogPosting-featured_image {
-        height: 400px;
-        height: 60vh;
+        .featured_image--info_box {
+            margin-top: -100px;
+            h1 {
+               font-size: 20px;
+                font-size: 8vw;
+            }
+            .summary{
+                font-size: 12px;
+                font-size: 5vw;
+            }
+            p {
+                font-size: 12px;
+                font-size: 4vw;
+            }
+            time {
+                font-size: 12px;
+                font-size: 4vw;
+            }
+        }
     }
 }

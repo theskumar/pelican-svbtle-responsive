@@ -1,5 +1,5 @@
 main {
-  padding-top: 4em;
+  padding-top: 2em;
 
   article {
     padding: 40px;
@@ -116,18 +116,20 @@ main {
     }
   }
   main {
-    max-width: 700px;
-    margin: 0 auto;
-    article {
-      margin: 0 auto;
-      max-width: 640px;
-    }
+        max-width: $normal_width;
+        margin: 0 auto;
+        article {
+            margin: 0 auto;
+            max-width: $normal_width;
+        }
   }
   .travel main {
-    max-width: 1200px;
-    article {
-      margin: 0 auto;
-      max-width: 1200px;
+        max-width: 100%;
+        article {
+            margin: 0 auto;
+            padding-right: 0;
+            padding-left: 0;
+            max-width: 100%;
+        }
     }
-  }
 }
