@@ -704,6 +704,10 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
     padding-left: 0;
     max-width: 100%;
   }
+  /* line 134, ../_global.scss */
+  .travel main .full img {
+    width: 100%;
+  }
 }
 /* line 2, ../_article.scss */
 .blogPosting-title h1 {
