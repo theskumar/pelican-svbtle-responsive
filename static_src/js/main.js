@@ -5,6 +5,12 @@ $(function() {
         var el = $(this);
         el.wrap(function() {
             return "<a href='" + el.attr('src') + "'></a>";
+        }).parent('a')
+        .css({'cursor': 'default'})
+        .click(function(e){
+            console.log($(this));
+            e.preventDefault();
+            return false;
         });
     });
 
