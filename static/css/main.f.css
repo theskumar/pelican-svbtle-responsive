@@ -738,31 +738,30 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
   position: relative;
   width: 100%;
   height: 600px;
-  height: 100vh;
   background-size: cover;
   background-position: top center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
-/* line 22, ../_article.scss */
+/* line 23, ../_article.scss */
 .blogPosting-featured_image .featured_image--info_box {
   color: white;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin-top: -200px;
   text-shadow: 0px 1px 1px #222;
   padding: 40px;
-  width: 700px;
-  margin-left: -350px;
   text-align: center;
+  margin: 0 auto;
 }
-/* line 33, ../_article.scss */
+/* line 29, ../_article.scss */
 .blogPosting-featured_image .featured_image--info_box h1 {
   text-transform: uppercase;
   font-size: 5em;
-  font-size: 4.9vw;
-  line-height: 6vw;
+  line-height: 1.5;
 }
-/* line 39, ../_article.scss */
+/* line 34, ../_article.scss */
 .blogPosting-featured_image .featured_image--info_box .summary {
   font-size: 45px;
   font-size: 2.5vw;
@@ -770,7 +769,7 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
   font-weight: 400;
   font-style: italic;
 }
-/* line 46, ../_article.scss */
+/* line 41, ../_article.scss */
 .blogPosting-featured_image .featured_image--info_box a {
   color: white;
   border-bottom: 1px solid white;
@@ -779,7 +778,7 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
   font-size: normal;
   text-transform: uppercase;
 }
-/* line 54, ../_article.scss */
+/* line 49, ../_article.scss */
 .blogPosting-featured_image .featured_image--info_box time {
   font-size: 15px;
   font-family: "adobe-garamond-pro", serif;
@@ -788,20 +787,20 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
   text-transform: uppercase;
 }
 
-/* line 64, ../_article.scss */
+/* line 59, ../_article.scss */
 .travel .featured_image--info_box {
   width: 1600px;
   margin-left: -800px;
 }
 
-/* line 70, ../_article.scss */
+/* line 65, ../_article.scss */
 .travel h1, .travel h2, .travel h3, .travel h4, .travel #article_text > p {
   max-width: 900px;
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 3%;
 }
-/* line 76, ../_article.scss */
+/* line 71, ../_article.scss */
 .travel h2 {
   line-height: normal;
   font-size: 39px;
@@ -815,31 +814,31 @@ main footer a.button_accent:hover, main footer a.button_accent:active {
 }
 
 @media screen and (max-width: 600px) {
-  /* line 95, ../_article.scss */
+  /* line 90, ../_article.scss */
   main article {
     padding: 10px;
   }
 
-  /* line 99, ../_article.scss */
+  /* line 94, ../_article.scss */
   .blogPosting-featured_image .featured_image--info_box {
     margin-top: -100px;
   }
-  /* line 101, ../_article.scss */
+  /* line 96, ../_article.scss */
   .blogPosting-featured_image .featured_image--info_box h1 {
     font-size: 20px;
     font-size: 8vw;
   }
-  /* line 105, ../_article.scss */
+  /* line 100, ../_article.scss */
   .blogPosting-featured_image .featured_image--info_box .summary {
     font-size: 12px;
     font-size: 5vw;
   }
-  /* line 109, ../_article.scss */
+  /* line 104, ../_article.scss */
   .blogPosting-featured_image .featured_image--info_box p {
     font-size: 12px;
     font-size: 4vw;
   }
-  /* line 113, ../_article.scss */
+  /* line 108, ../_article.scss */
   .blogPosting-featured_image .featured_image--info_box time {
     font-size: 12px;
     font-size: 4vw;
