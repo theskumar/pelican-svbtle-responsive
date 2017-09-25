@@ -1834,7 +1834,6 @@ $(function() {
             return false;
         });
     });
-    // gallery.find('a')
 
     gallery.justifiedGallery({
         'rowHeight': 150

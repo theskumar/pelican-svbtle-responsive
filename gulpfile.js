@@ -33,15 +33,11 @@ gulp.task('styles', function() {
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(cmq({
-      log: true
-    }))
+        // .pipe(cmq({log: true }))
         .pipe(minifycss())
         .pipe(gulp.dest('static/css'))
         .pipe(livereload())
-        .pipe(notify({
-            message: "Styles task completed"
-        }));
+        .pipe(notify({message: "Styles task completed"}));
 });
 
 gulp.task('scripts', function() {

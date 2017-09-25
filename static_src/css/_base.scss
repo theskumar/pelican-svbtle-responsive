@@ -15,15 +15,20 @@ html {
   box-sizing: inherit;
 }
 
-
 body {
   margin: 0;
   padding: 0;
   background-color: white;
   color: $font_color;
   font-family: 'PT Sans', sans-serif;
-  font-size: 1.125em;
+  font-size: 1em;
 }
+
+html, body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 
 a {
   color: $link_color;

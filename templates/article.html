@@ -46,6 +46,38 @@
   <div id="article_text" itemprop="articleBody" class='blogPosting-text'>
     {{ article.content }}
   </div>
+  <style>.promo {
+    text-align: left;
+    border: 1px solid #E3E5E4;
+    background: #F3F4EE;
+    padding: 5px 15px;
+    position: relative;
+    margin-left: 73px;
+    margin-top: 20px;
+}
+.promo img {
+    position: absolute;
+    left: -67px;
+    width: 60px;
+    top: -17px;
+}
+.promo .tweet {
+    position: absolute;
+    right: 0px;
+    top: 4px;
+    width: 95px;
+}
+</style>
+<div style="border-bottom: 1px dashed #CCC;">&nbsp;</div>
+<div class="promo">
+    <img src="http://blog.vjeux.com/wp-content/themes/coogee/images/at-twitter.png" />
+    <div class="tweet">
+        <a href="https://twitter.com/share" class="twitter-share-button" data-via="_theskumar">Tweet</a>
+        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+        </div>
+    If you liked this article, you might be interested in my <a href="http://www.twitter.com/_theskumar/" target="_blank">Twitter feed</a> as well.
+</div>
+<div style="border-bottom: 1px dashed #CCC;">&nbsp;</div>
 
   {% if not article.featured_image %}
   <div id="article_meta" class='blogPosting-meta'>
