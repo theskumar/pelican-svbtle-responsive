@@ -434,42 +434,6 @@ footer #ending_message .builtby {
   margin: 10px 0;
 }
 
-/* line 1, ../_site_info.scss */
-.site_info {
-  position: fixed;
-  top: 10px;
-  left: 10px;
-  z-index: 3;
-}
-/* line 6, ../_site_info.scss */
-.site_info .logo {
-  max-width: 50px;
-  display: inline-block;
-}
-/* line 10, ../_site_info.scss */
-.site_info .info {
-  opacity: 0;
-  display: inline-block;
-  padding-left: 5px;
-  vertical-align: top;
-}
-/* line 15, ../_site_info.scss */
-.site_info .info h1, .site_info .info h2, .site_info .info p {
-  margin: 0;
-}
-/* line 18, ../_site_info.scss */
-.site_info .info h2 {
-  font-size: 15px;
-}
-/* line 21, ../_site_info.scss */
-.site_info .info p {
-  font-size: 10px;
-}
-/* line 25, ../_site_info.scss */
-.site_info:hover .info {
-  opacity: 1;
-}
-
 @media print {
   /* line 2, ../_print.scss */
   *,
