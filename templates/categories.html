@@ -2,11 +2,12 @@
 {% block title %}Categories{% endblock %}
 
 {% block content %}
+<h2>Categories on {{ SITENAME }}</h2>
 <article>
   <div id="article_text">
     <ul>
       {% for category, articles in categories %}
-      <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a></li>
+      <li><a href="{{ SITEURL }}/{{ category.url }}">{{ category }}</a> ({{ articles|count }})</li>
       {% endfor %}
     </ul>
   </div>

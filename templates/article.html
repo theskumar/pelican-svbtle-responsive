@@ -1,10 +1,12 @@
 {% extends "base.html" %}
+
 {% block page_class %} article page-single {% if article.featured_image %}has-featured-image{% endif %} {{article.category}}{% endblock page_class %}
+
 {% block title -%}
 {{ article.title|striptags|e }}{%if article.subtitle %} - {{ article.subtitle|striptags|e }}{% endif %} · {{ super() }}
 {%- endblock title %}
-{% block head_meta_tag %}
 
+{% block head_meta_tag %}
 <meta name="description" content="{{article.summary|striptags|e}}">
 <meta name="date" content="{{article.date}}">
 
@@ -35,79 +37,74 @@
 {% endblock featured_image %}
 
 {% block content %}
-<article itemscope itemtype="http://schema.org/BlogPosting" class='blogPosting'>
+<article itemscope itemtype="http://schema.org/BlogPosting" class='blogPosting' data-progress-indicator>
   {% if not article.featured_image %}
-    <div id="article_title" class='title blogPosting-title'>
-        <h1 itemprop="headline">{{ article.title }}</h1>
-        <time datetime="{{article.date}}" itemprop="datePublished">{{ article.locale_date }}</time>.
 
-    </div>
+    <header id="article_title" class='article__header title blogPosting-title'>
+        <ul class="article__info">
+          <li><time datetime="{{article.date}}" itemprop="datePublished">{{ article.locale_date }}</time></li>
+          {% if article.readtime %}
+            <li>{{ article.readtime_string }}</li>
+          {% endif %}
+          {% if article.tags %}
+          <li class="article__tags">
+            {% for tag in article.tags %}
+              <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+            {% endfor %}
+          </li>
+          {% endif %}
+        </ul>
+        <h1 itemprop="headline">{{ article.title }}</h1>
+    </header>
   {% endif %}
-  <div id="article_text" itemprop="articleBody" class='blogPosting-text'>
+  <div id="article_text" itemprop="articleBody" class='article__content'>
     {{ article.content }}
   </div>
-  <style>.promo {
-    text-align: left;
-    border: 1px solid #E3E5E4;
-    background: #F3F4EE;
-    padding: 5px 15px;
-    position: relative;
-    margin-left: 73px;
-    margin-top: 20px;
-}
-.promo img {
-    position: absolute;
-    left: -67px;
-    width: 60px;
-    top: -17px;
-}
-.promo .tweet {
-    position: absolute;
-    right: 0px;
-    top: 4px;
-    width: 95px;
-}
-</style>
-<div style="border-bottom: 1px dashed #CCC;">&nbsp;</div>
-<div class="promo">
-    <img src="http://blog.vjeux.com/wp-content/themes/coogee/images/at-twitter.png" />
-    <div class="tweet">
-        <a href="https://twitter.com/share" class="twitter-share-button" data-via="_theskumar">Tweet</a>
-        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-        </div>
-    If you liked this article, you might be interested in my <a href="http://www.twitter.com/_theskumar/" target="_blank">Twitter feed</a> as well.
-</div>
-<div style="border-bottom: 1px dashed #CCC;">&nbsp;</div>
 
   {% if not article.featured_image %}
   <div id="article_meta" class='blogPosting-meta'>
     <p>Category: <a href="{{ SITEURL }}/{{ article.category.url }}">{{ article.category }}</a>
-    {% if article.tags %} Tags:
-      {% for tag in article.tags %}
-      <a href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
-      {% endfor %}
-    {% endif %}
     </p>
   </div>
   {% endif %}
-
-    {% if DISQUS_SITENAME %}
-    <div class='blogPosting-comment' id="article_comments" style="display:{%if COLLAPSE_COMMENTS %}none{% else %}block{% endif %}">
-        <div id="disqus_thread"></div>
-        <script>
-            var disqus_identifier = "{{ article.url }}";
-            (function() {
-                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-                dsq.src = 'https://{{ DISQUS_SITENAME }}.disqus.com/embed.js';
-                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-            })();
-        </script>
-    </div>
-    {% endif %}
-
 </article>
 {% endblock %}
 
 {% block footer %}
 <p><a href="{{ SITEURL }}/" class="button_accent">&larr; Back</a></p>
+{% include "modules/reframe.html" %}
+<script>
+(function(window, document) {
+    const progressIndicatorForElement = document.querySelector('[data-progress-indicator]');
+    if (!progressIndicatorForElement) {
+        return;
+    }
+
+    const progressElement = document.createElement('div');
+    progressElement.setAttribute('role', 'presentation');
+    progressElement.classList.add('progress-indicator');
+
+    // Initial position.
+    progressElement.style.left = "-100%";
+    progressElement.style.transform = "translateX(-100%)";
+
+    document.body.appendChild(progressElement);
+
+    let lastKnownScrollPosition = 0;
+    let ticking = false;
+
+    window.addEventListener('scroll', function(e) {
+        lastKnownScrollPosition = window.scrollY;
+        if (ticking) {
+            return;
+        }
+        window.requestAnimationFrame(function() {
+            var offset = Math.min(100, lastKnownScrollPosition / (progressIndicatorForElement.scrollHeight - window.innerHeight) * 100);
+            progressElement.style.transform = `translateX(${offset}%)`;
+            ticking = false;
+        });
+        ticking = true;
+    });
+})(window, document);
+</script>
 {% endblock %}

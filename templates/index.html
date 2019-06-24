@@ -3,24 +3,30 @@
 {% block page_class %} blog-list {% endblock %}
 
 {% block content %}
-<section itemscope itemtype="http://schema.org/Blog">
+<section class='post__list' itemscope itemtype="http://schema.org/Blog">
     {% for article in articles_page.object_list %}
-    <article itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
-
-      <header class="article_title" id="article_title">
+    <article class="post__item" itemprop="blogPosts" itemscope itemtype="http://schema.org/BlogPosting">
+        <header class="article__header">
+            <ul class="article__info">
+                <li><time datetime="{{article.date}}" itemprop="datePublished">{{ article.locale_date }}</time></li>
+                {% if article.readtime %}
+                    <li title="The estimated read time for this article is {{ article.readtime_string }}">{{ article.readtime_string }}</li>
+                {% endif %}
+                {% if article.tags %}
+                <li class="article__tags">
+                {% for tag in article.tags %}
+                    <a class='tag' href="{{ SITEURL }}/{{ tag.url }}">{{ tag }}</a>{% if not loop.last %},{% endif %}
+                {% endfor %}
+                </li>
+            {% endif %}
+        </ul>
         <h2 itemprop="headline"><a href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">{{ article.title }}</a></h2>
       </header>
-
       {% if article.summary %}
-          <section class='article_summary' id="article_text" itemprop="text">
-            <p>{{ article.summary|striptags }} <a class='read-more' href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">&raquo;</a></p>
-          </section>
+        <p itemprop="text">{{ article.summary|striptags }} <a class='read-more' href="{{ SITEURL }}/{{ article.url }}" title="{{ article.title }}">&raquo;</a></p>
       {% endif %}
 
     </article>
-    {% if not loop.last %}
-    <hr />
-    {% endif %}
     {% endfor %}
 {% endblock content %}
 

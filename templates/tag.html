@@ -1,21 +1,21 @@
 {% extends "index.html" %}
-{% block title %}Tag: {{ tag }}{% endblock %}
+{% block title %}{{ SITENAME }} - {{ tag }} tag{% endblock %}
 
 {% block head %}
 {% if TAG_FEED_ATOM %}
-<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ tag }} Tag Atom Feed" />
+<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(slug=tag) }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} {{ tag }} Tag Atom Feed" />
 {% endif %}
 {% if TAG_FEED_RSS %}
-<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ tag }} Tag RSS Feed" />
+<link href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(slug=tag) }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} {{ tag }} Tag RSS Feed" />
 {% endif %}
 {% endblock %}
 
-{% block header %}
-<p>Tag: {{ tag }}
+{% block content_title %}
+<h4>Articles tagged with "{{ tag }}"</h4>
 {% if TAG_FEED_ATOM %}
-&#124; <a href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(tag) }}">Atom Feed</a>
+&#124; <a href="{{ FEED_DOMAIN }}/{{ TAG_FEED_ATOM|format(slug=tag) }}">Atom Feed</a>
 {% endif %}
 {% if TAG_FEED_RSS %}
-&#124; <a href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(tag) }}">RSS Feed</a>
+&#124; <a href="{{ FEED_DOMAIN }}/{{ TAG_FEED_RSS|format(slug=tag) }}">RSS Feed</a>
 {% endif %}</p>
 {% endblock %}
